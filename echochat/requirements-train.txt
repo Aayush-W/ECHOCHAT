@@ -1,0 +1,8 @@
+# Training/finetuning dependencies (optional)
+torch>=2.1
+transformers>=4.39
+datasets>=2.18
+peft>=0.10
+trl>=0.8
+bitsandbytes>=0.43
+accelerate>=0.29

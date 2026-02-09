@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+.venv/
+
+# Tooling
+.vscode/
+.dist/
+
+# Logs
+*.log
+
+# Data (contains personal content)
+echochat/data/uploads/
+echochat/data/*.json
+echochat/data/*.jsonl
+echochat/data/*.zip
+echochat/data/*.mp3
+echochat/data/*.m4a
+echochat/data/*.opus
+echochat/data/*.mp4
+echochat/data/*.jpg
+echochat/data/*.jpeg
+echochat/data/*.png
+echochat/data/*.webp
+echochat/data/*.pdf
+echochat/data/*.docx
+echochat/data/*.vcf
+echochat/data/*.dxf
+
+# Models/embeddings
+models/
+echochat/data/models/
+echochat/data/vector_db/

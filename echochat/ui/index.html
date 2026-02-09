@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EchoChat</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>EchoChat</h1>
+        <p>Local chat UI powered by your Ollama backend.</p>
+      </header>
+
+      <main id="chat" class="chat"></main>
+
+      <form id="composer" class="composer">
+        <input
+          id="message"
+          type="text"
+          placeholder="Type a message..."
+          autocomplete="off"
+        />
+        <label class="toggle">
+          <input id="memories" type="checkbox" checked />
+          <span>Use memories</span>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
