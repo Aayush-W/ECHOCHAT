@@ -1,0 +1,117 @@
+# Data & Privacy
+data/uploads/          # User-provided chat files (SENSITIVE)
+data/memory_data.json  # Personal conversation data (SENSITIVE)
+data/personality_profile.json  # Personal analytics (SENSITIVE)
+data/training_data.jsonl  # Training pairs (SENSITIVE)
+data/vector_db/        # Vector embeddings (SENSITIVE)
+data/models/           # Fine-tuned models (LARGE)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env
+.env.local
+.env.*.local
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# OS-specific
+Thumbs.db
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# IDE Temporary Files
+*.bak
+*.tmp
+
+# Node modules (if frontend needs it)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Large files
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+
+# Database backups
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Environment-specific files
+.env.production
+.env.development
+.env.testing
+
+# Uncommitted local changes
+local_settings.py
