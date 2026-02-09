@@ -4,8 +4,8 @@ Thank you for your interest in contributing to EchoChat! This document provides 
 
 ## Getting Help
 
-- **Questions?** Open a [GitHub Discussion](https://github.com/yourusername/echochat/discussions)
-- **Found a bug?** Open a [GitHub Issue](https://github.com/yourusername/echochat/issues)
+- **Questions?** Open a [GitHub Discussion](https://github.com/Aayush-W/echochat/discussions)
+- **Found a bug?** Open a [GitHub Issue](https://github.com/Aayush-W/echochat/issues)
 - **Need details?** Check [README_CONTRIBUTORS.md](README_CONTRIBUTORS.md) for in-depth documentation
 
 ## How to Contribute
