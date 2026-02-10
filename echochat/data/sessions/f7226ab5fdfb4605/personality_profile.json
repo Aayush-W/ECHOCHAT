@@ -1,0 +1,132 @@
+{
+  "total_messages": 662,
+  "language_mixing": {
+    "hinglish_percentage": 2.719033232628399,
+    "english_only_percentage": 97.2809667673716,
+    "language_mixing_score": 2.719033232628399,
+    "detected_hinglish_words": [
+      "ch",
+      "to",
+      "ho",
+      "jaun",
+      "na",
+      "te",
+      "ka",
+      "be",
+      "saang",
+      "mazya"
+    ]
+  },
+  "emoji_patterns": {
+    "emoji_usage_percentage": 3.1722054380664653,
+    "top_emojis": [
+      "😂",
+      "✨",
+      "😅",
+      "🎉",
+      "🎂",
+      "🔗",
+      "😕",
+      "💻",
+      "📊",
+      "🎓"
+    ],
+    "emoji_frequency": {
+      "😂": 14,
+      "✨": 8,
+      "😅": 4,
+      "🎉": 3,
+      "🎂": 3,
+      "🔗": 3,
+      "😕": 2,
+      "💻": 2,
+      "📊": 2,
+      "🎓": 2
+    },
+    "emoji_positions": {
+      "start": 7,
+      "middle": 3,
+      "end": 11
+    },
+    "avg_emojis_per_message": 0.11027190332326284
+  },
+  "sentence_structure": {
+    "avg_message_length": 71.79909365558912,
+    "min_message_length": 1,
+    "max_message_length": 6457,
+    "avg_words_per_message": 9.669184290030211,
+    "short_messages_percentage": 37.31117824773414,
+    "long_messages_percentage": 5.13595166163142,
+    "punctuation_style": {
+      "-": 598,
+      ".": 526,
+      ",": 292,
+      ";": 228,
+      ":": 190
+    },
+    "multiline_percentage": 12.83987915407855
+  },
+  "humor_style": {
+    "sarcasm_indicators_percentage": 0.906344410876133,
+    "self_deprecation_percentage": 0.0,
+    "casual_humor_percentage": 1.0574018126888218,
+    "detected_sarcasm_words": [
+      "xd",
+      "haha",
+      "hehe",
+      "😂",
+      "joke",
+      "lol",
+      "rofl"
+    ],
+    "humor_style": "friendly"
+  },
+  "emotional_patterns": {
+    "question_percentage": 7.250755287009064,
+    "exclamation_percentage": 0.0,
+    "emotional_engagement": "moderate",
+    "sentiment_tendency": "negative"
+  },
+  "topic_preferences": {
+    "top_topics": [
+      "file",
+      "attached",
+      "img",
+      "jpg",
+      "pdf",
+      "for",
+      "digitalwrite",
+      "int",
+      "aahe",
+      "https",
+      "20250614",
+      "this",
+      "lcd",
+      "low",
+      "data"
+    ],
+    "topic_keywords": {
+      "file": 176,
+      "attached": 172,
+      "img": 115,
+      "jpg": 115,
+      "pdf": 58,
+      "for": 48,
+      "digitalwrite": 44,
+      "int": 42,
+      "aahe": 35,
+      "https": 35,
+      "20250614": 33,
+      "this": 31,
+      "lcd": 31,
+      "low": 26,
+      "data": 25
+    }
+  },
+  "response_characteristics": {
+    "response_style": "brief_casual",
+    "engagement_level": "high",
+    "formality": "low",
+    "average_response_time_category": "immediate"
+  }
+}

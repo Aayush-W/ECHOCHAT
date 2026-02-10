@@ -5,6 +5,10 @@ sentence-transformers>=2.6
 torch>=2.1
 fastapi>=0.110
 uvicorn>=0.27
+python-multipart>=0.0.9
+transformers>=4.43.0
+peft>=0.10
+accelerate>=0.27
 
 # Dev/test
 pytest>=7.4

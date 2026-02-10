@@ -2,6 +2,15 @@ import re
 from datetime import datetime
 from typing import List, Dict
 
+
+def _is_emoji_char(ch: str) -> bool:
+    cp = ord(ch)
+    return (
+        0x1F1E6 <= cp <= 0x1F1FF
+        or 0x1F300 <= cp <= 0x1FAFF
+        or 0x2600 <= cp <= 0x27BF
+    )
+
 def parse_whatsapp_chat(file_path: str) -> List[Dict]:
     """
     Parse WhatsApp exported chat (.txt) into structured data.
@@ -20,7 +29,7 @@ def parse_whatsapp_chat(file_path: str) -> List[Dict]:
     
     # WhatsApp timestamp pattern: DD/MM/YYYY, HH:MM am/pm - Sender: Message
     # Handles non-breaking space (\u202f) used by WhatsApp
-    timestamp_pattern = r'^(\d{1,2}/\d{1,2}/\d{4}),\s(\d{1,2}:\d{2}\s(?:am|pm))\s*[-–]\s*(.+?):\s(.*)$'
+    timestamp_pattern = r'^(\d{1,2}/\d{1,2}/\d{4}),\s(\d{1,2}:\d{2}\s(?:am|pm))\s*[-\u2013]\s*(.+?):\s(.*)$'
     
     system_keywords = {
         'Messages you send to this group are now encrypted',
@@ -73,8 +82,8 @@ def parse_whatsapp_chat(file_path: str) -> List[Dict]:
             if not message:
                 continue
             
-            # Count emojis (simple check for non-ASCII characters)
-            has_emoji = bool(re.search(r'[\U0001F300-\U0001F9FF]|[^\w\s\-.,!?]', message))
+            # Count emojis (emoji codepoint check)
+            has_emoji = any(_is_emoji_char(ch) for ch in message)
             
             messages.append({
                 'timestamp': timestamp,

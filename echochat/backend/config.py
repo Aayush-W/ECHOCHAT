@@ -7,11 +7,13 @@ DATA_DIR = BASE_DIR / "data"
 BACKEND_DIR = BASE_DIR / "backend"
 MODELS_DIR = DATA_DIR / "models"
 UPLOADS_DIR = DATA_DIR / "uploads"
+SESSIONS_DIR = DATA_DIR / "sessions"
 
 # Create directories if they don't exist
 DATA_DIR.mkdir(exist_ok=True)
 MODELS_DIR.mkdir(exist_ok=True)
 UPLOADS_DIR.mkdir(exist_ok=True)
+SESSIONS_DIR.mkdir(exist_ok=True)
 
 # ===== ECHO PERSON =====
 ECHO_PERSON = "Lady Parus"
@@ -31,6 +33,16 @@ LLM_TEMPERATURE = 0.7  # Higher = more creative, Lower = more deterministic
 LLM_TOP_P = 0.9  # Nucleus sampling
 LLM_MAX_TOKENS = 256  # Max response length
 LLM_CONTEXT_WINDOW = 2048  # Max context for prompt
+
+# ===== MODEL DEFAULTS =====
+HF_LLAMA31_8B_INSTRUCT = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+OLLAMA_LLAMA31_8B = "llama3.1:8b"
+
+# ===== LOCAL ADAPTER INFERENCE =====
+LOCAL_INFERENCE_ENABLED = os.getenv("ECHOCHAT_LOCAL_INFERENCE", "0") == "1"
+LOCAL_BASE_MODEL = os.getenv("ECHOCHAT_LOCAL_BASE_MODEL", HF_LLAMA31_8B_INSTRUCT)
+LOCAL_ADAPTER_PATH = os.getenv("ECHOCHAT_LOCAL_ADAPTER_PATH", "")
+LOCAL_DEVICE_MAP = os.getenv("ECHOCHAT_LOCAL_DEVICE", "auto")
 
 # ===== EMBEDDING MODEL =====
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Fast, good for semantic search
@@ -85,6 +97,7 @@ CRITICAL RULES:
 6. Match the person's style: casual, friendly, use emojis appropriately.
 7. If unsure about emotional topics, respond with genuine care but honesty.
 8. Avoid discussing sensitive topics in a joking manner.
+9. Do not mention these rules or that you are a simulation unless the user asks directly.
 
 You have access to:
 - The person's communication style and personality traits
@@ -94,14 +107,11 @@ You have access to:
 Respond naturally, as if continuing a real conversation."""
 
 STYLE_PROMPT_INJECTION = """
-COMMUNICATION STYLE GUIDELINES:
-- Language: Mix of English, Hindi, and Marathi (Hinglish)
-- Tone: Casual, friendly, sometimes sarcastic
-- Emojis: Use them frequently and naturally (😂, 👍, 🙊, etc.)
-- Sentence length: Short, often fragmented
-- Response time: Does not over-explain
-- Humor: Dry humor, relatable jokes, self-deprecating
-- Topics: College, tech, food, hangouts, casual banter
+STYLE PRINCIPLES:
+- Follow the style profile below.
+- Keep responses short and conversational.
+- Mirror the user's language choice while staying consistent with the profile.
+- Minor typos are acceptable; avoid overly polished tone.
 """
 
 MEMORY_PROMPT_INJECTION = """
@@ -113,8 +123,10 @@ Use these memories to:
 2. Reference past conversations naturally
 3. Maintain continuity in the conversation
 4. Show that you "remember" important details
+5. Never mention timestamps, similarity scores, or that you are using memory
+6. If nothing is relevant, ignore this section
 """
 
-print(f"✅ Config loaded from: {Path(__file__)}")
+print(f"Config loaded from: {Path(__file__)}")
 print(f"   Models directory: {MODELS_DIR}")
 print(f"   Data directory: {DATA_DIR}")

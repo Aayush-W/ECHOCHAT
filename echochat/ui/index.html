@@ -9,25 +9,63 @@
   <body>
     <div class="app">
       <header class="header">
-        <h1>EchoChat</h1>
-        <p>Local chat UI powered by your Ollama backend.</p>
+        <div>
+          <h1>EchoChat</h1>
+          <p>Upload a chat export and get fast, style-matched replies. No training required.</p>
+        </div>
+        <div class="badge">Local • Private • Fast</div>
       </header>
 
-      <main id="chat" class="chat"></main>
+      <section class="panel upload">
+        <div class="panel-head">
+          <h2>1. Upload chat</h2>
+          <p>Works with WhatsApp .txt exports. Processing builds memories for fast RAG.</p>
+        </div>
+        <form id="upload-form" class="upload-form">
+          <label class="file">
+            <input id="chat-file" type="file" accept=".txt" />
+            <span>Choose chat.txt</span>
+          </label>
+          <button id="upload-btn" type="submit">Process chat</button>
+          <div id="upload-status" class="status">Waiting for upload</div>
+        </form>
+        <div class="upload-meta">
+          <div>
+            <span class="label">Session</span>
+            <span id="session-id">—</span>
+          </div>
+          <div>
+            <span class="label">Messages</span>
+            <span id="message-count">—</span>
+          </div>
+        </div>
+      </section>
 
-      <form id="composer" class="composer">
-        <input
-          id="message"
-          type="text"
-          placeholder="Type a message..."
-          autocomplete="off"
-        />
-        <label class="toggle">
-          <input id="memories" type="checkbox" checked />
-          <span>Use memories</span>
-        </label>
-        <button type="submit">Send</button>
-      </form>
+      <section class="panel chat-panel">
+        <div class="chat-head">
+          <div class="selector">
+            <span class="label">Echo person</span>
+            <select id="person-select" disabled></select>
+          </div>
+          <label class="toggle">
+            <input id="memories" type="checkbox" checked />
+            <span>Use memories</span>
+          </label>
+        </div>
+
+        <main id="chat" class="chat"></main>
+
+        <form id="composer" class="composer">
+          <input
+            id="message"
+            type="text"
+            placeholder="Type a message..."
+            autocomplete="off"
+            disabled
+          />
+          <button type="submit" disabled>Send</button>
+        </form>
+      </section>
     </div>
 
     <script src="/static/app.js"></script>

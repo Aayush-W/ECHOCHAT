@@ -4,6 +4,20 @@ from typing import List, Dict
 from collections import Counter
 from pathlib import Path
 
+
+def _is_emoji_char(ch: str) -> bool:
+    cp = ord(ch)
+    return (
+        0x1F1E6 <= cp <= 0x1F1FF
+        or 0x1F300 <= cp <= 0x1FAFF
+        or 0x2600 <= cp <= 0x27BF
+    )
+
+
+def _contains_devanagari(text: str) -> bool:
+    return any(0x0900 <= ord(ch) <= 0x097F for ch in text)
+
+
 class PersonalityAnalyzer:
     """
     Extract communication style patterns from message data.
@@ -64,7 +78,7 @@ class PersonalityAnalyzer:
             if hinglish_matches >= 2:
                 hinglish_count += 1
                 mixed += 1
-            elif re.search(r'[ा-ॿ]', text) or re.search(r'[ි-ුූ]', text):
+            elif _contains_devanagari(text):
                 hinglish_count += 1
                 mixed += 1
             else:
@@ -79,14 +93,13 @@ class PersonalityAnalyzer:
     
     def _analyze_emoji_patterns(self) -> Dict:
         """Extract emoji usage patterns."""
-        emoji_regex = r'[\U0001F300-\U0001F9FF]|[^\w\s\-.,!?]'
         emoji_messages = 0
         emoji_counter = Counter()
         emoji_positions = {'start': 0, 'middle': 0, 'end': 0}
         
         for msg in self.messages:
             text = msg['message']
-            emojis = re.findall(emoji_regex, text)
+            emojis = [ch for ch in text if _is_emoji_char(ch)]
             
             if emojis:
                 emoji_messages += 1
@@ -94,9 +107,9 @@ class PersonalityAnalyzer:
                     emoji_counter[emoji] += 1
                 
                 # Track position
-                if re.match(emoji_regex, text):
+                if text and _is_emoji_char(text[0]):
                     emoji_positions['start'] += 1
-                elif re.search(rf"(?:{emoji_regex})$", text):
+                elif text and _is_emoji_char(text[-1]):
                     emoji_positions['end'] += 1
                 else:
                     emoji_positions['middle'] += 1
@@ -106,7 +119,10 @@ class PersonalityAnalyzer:
             'top_emojis': [emoji for emoji, _ in emoji_counter.most_common(10)],
             'emoji_frequency': dict(emoji_counter.most_common(10)),
             'emoji_positions': emoji_positions,
-            'avg_emojis_per_message': sum(len(re.findall(emoji_regex, msg['message'])) for msg in self.messages) / len(self.messages),
+            'avg_emojis_per_message': sum(
+                len([ch for ch in msg['message'] if _is_emoji_char(ch)])
+                for msg in self.messages
+            ) / len(self.messages),
         }
     
     def _analyze_sentence_structure(self) -> Dict:

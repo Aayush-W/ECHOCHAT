@@ -1,6 +1,8 @@
 import json
+import re
+import textwrap
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 import numpy as np
 
@@ -24,6 +26,9 @@ class MemoryStore:
     - Memory decay/aging (optional)
     """
 
+    _shared_model = None
+    _shared_model_name = None
+
     def __init__(
         self,
         model_name: str = "all-MiniLM-L6-v2",
@@ -43,7 +48,15 @@ class MemoryStore:
 
         if self.embeddings_available:
             try:
-                self.model = SentenceTransformer(model_name)
+                if (
+                    MemoryStore._shared_model is not None
+                    and MemoryStore._shared_model_name == model_name
+                ):
+                    self.model = MemoryStore._shared_model
+                else:
+                    self.model = SentenceTransformer(model_name)
+                    MemoryStore._shared_model = self.model
+                    MemoryStore._shared_model_name = model_name
                 print(f"Loaded embedding model: {model_name}")
             except Exception as e:
                 print(f"Error loading embedding model: {e}")
@@ -92,7 +105,8 @@ class MemoryStore:
         self,
         query: str,
         top_k: int = 5,
-        similarity_threshold: float = 0.3
+        similarity_threshold: float = 0.3,
+        max_length: Optional[int] = None,
     ) -> List[Dict]:
         """
         Semantic search for similar messages.
@@ -107,7 +121,7 @@ class MemoryStore:
         """
         if not self.embeddings_available or not self.model or self.embeddings is None:
             print("Embeddings unavailable. Returning recent messages.")
-            return self.get_recent_messages(top_k)
+            return self.get_recent_messages(top_k, max_length=max_length)
 
         try:
             query_embedding = self.model.encode([query])[0]
@@ -116,23 +130,35 @@ class MemoryStore:
             denom = np.where(denom == 0, 1e-12, denom)
             similarities = np.dot(self.embeddings, query_embedding) / denom
 
-            top_indices = np.argsort(similarities)[::-1][:top_k]
+            sorted_indices = np.argsort(similarities)[::-1]
 
             results = []
-            for idx in top_indices:
-                if similarities[idx] >= similarity_threshold:
-                    results.append({
-                        'message': self.messages[idx],
-                        'similarity': float(similarities[idx]),
-                    })
+            for idx in sorted_indices:
+                if len(results) >= top_k:
+                    break
+                if similarities[idx] < similarity_threshold:
+                    continue
 
-            return results
+                msg = self.messages[idx]
+                text = msg.get('text', '')
+                msg_length = msg.get('length', len(text))
+                if max_length is not None and msg_length > max_length:
+                    continue
+
+                results.append({
+                    'message': msg,
+                    'similarity': float(similarities[idx]),
+                })
+
+            if results:
+                return results
+            return self.get_recent_messages(top_k, max_length=max_length)
 
         except Exception as e:
             print(f"Error during search: {e}")
-            return self.get_recent_messages(top_k)
+            return self.get_recent_messages(top_k, max_length=max_length)
 
-    def get_recent_messages(self, count: int = 5) -> List[Dict]:
+    def get_recent_messages(self, count: int = 5, max_length: Optional[int] = None) -> List[Dict]:
         """Get most recent messages (fallback)."""
         if not self.messages:
             return []
@@ -141,27 +167,92 @@ class MemoryStore:
             self.messages,
             key=lambda x: x.get('timestamp', ''),
             reverse=True
-        )[:count]
+        )
+
+        if max_length is not None:
+            filtered = []
+            for msg in recent:
+                text = msg.get('text', '')
+                msg_length = msg.get('length', len(text))
+                if msg_length <= max_length:
+                    filtered.append(msg)
+            recent = filtered
+
+        recent = recent[:count]
 
         return [{'message': msg, 'similarity': 0.0} for msg in recent]
 
-    def format_context(self, search_results: List[Dict]) -> str:
+    def format_context(
+        self,
+        search_results: List[Dict],
+        include_meta: bool = False,
+        max_chars: int = 220,
+    ) -> str:
         """Format search results as context string for prompt."""
         if not search_results:
-            return "No relevant memories found."
+            return ""
 
         context_lines = []
-        for i, result in enumerate(search_results, 1):
+        for result in search_results:
             msg = result['message']
-            similarity = result['similarity']
-            timestamp = msg.get('timestamp', 'unknown')
+            text = msg.get('text', '').strip()
+            if not text:
+                continue
 
-            context_lines.append(
-                f"[{i}] ({timestamp}, similarity: {similarity:.2f})\n"
-                f"   Message: {msg.get('text', '')}"
-            )
+            if max_chars is not None and len(text) > max_chars:
+                text = textwrap.shorten(text, width=max_chars, placeholder="...")
+
+            if include_meta:
+                timestamp = msg.get('timestamp', 'unknown')
+                context_lines.append(f"- ({timestamp}) {text}")
+            else:
+                context_lines.append(f"- {text}")
 
         return '\n'.join(context_lines)
+
+    def sample_style_examples(self, count: int = 4, max_length: int = 120) -> List[str]:
+        """Pick short, style-rich messages to use as tone examples."""
+        if not self.messages:
+            return []
+
+        candidates = []
+        for msg in self.messages:
+            text = msg.get('text', '').strip()
+            if not text:
+                continue
+            if len(text) < 3 or len(text) > max_length:
+                continue
+            if "\n" in text:
+                continue
+            if "http://" in text or "https://" in text:
+                continue
+            if re.search(r"\b\d{7,}\b", text):
+                continue
+
+            score = 0
+            if msg.get('has_emoji'):
+                score += 2
+            if re.search(r"\b(ya|haan|nahi|kya|bhai|bro|lol|hehe|xd|hmm|ok|okay)\b", text.lower()):
+                score += 1
+            if "?" in text or "!" in text:
+                score += 1
+            if len(text.split()) <= 6:
+                score += 1
+
+            candidates.append((score, len(text), text))
+
+        if not candidates:
+            return []
+
+        candidates.sort(key=lambda x: (-x[0], x[1], x[2]))
+        examples = []
+        for _, _, text in candidates:
+            if text not in examples:
+                examples.append(text)
+            if len(examples) >= count:
+                break
+
+        return examples
 
     def add_memory(self, message: Dict) -> None:
         """Add a new message to memory."""
