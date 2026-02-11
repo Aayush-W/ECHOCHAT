@@ -1,6 +1,8 @@
 from typing import List, Dict, Tuple
 import json
 
+from .text_filter import is_blocked
+
 ECHOPERSON_NAME = "Lady Parus"
 USER_NAME = "Aayush W⚡"
 
@@ -53,6 +55,7 @@ def build_datasets(
             }
         }
         for msg in echo_messages
+        if not is_blocked(msg['message'])
     ]
     
     # Build training data (message pairs)
@@ -70,6 +73,8 @@ def build_datasets(
         
         # Skip very short inputs or outputs
         if len(current_msg['message']) < 2 or len(next_msg['message']) < 1:
+            continue
+        if is_blocked(current_msg['message']) or is_blocked(next_msg['message']):
             continue
         
         training_pair = {

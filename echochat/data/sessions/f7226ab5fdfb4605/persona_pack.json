@@ -1,0 +1,100 @@
+{
+  "total_messages": 446,
+  "avg_words_per_message": 5.971360381861575,
+  "avg_chars_per_message": 32.70754716981132,
+  "emoji_rate": 0.03811659192825112,
+  "top_emojis": [
+    "😂",
+    "✨",
+    "😅",
+    "🎉",
+    "🎂",
+    "😕",
+    "🤝",
+    "🙂"
+  ],
+  "common_starters": [
+    "ok",
+    "okay",
+    "hlo",
+    "yep",
+    "ho",
+    "happy birthday",
+    "hn",
+    "live location"
+  ],
+  "common_endings": [
+    "ok",
+    "okay",
+    "hlo",
+    "aahe ka",
+    "yep",
+    "ho",
+    "hn",
+    "good night"
+  ],
+  "slang_words": [
+    "bhai",
+    "bhosdike",
+    "gandu",
+    "bro",
+    "aahe",
+    "for",
+    "cha",
+    "ki",
+    "ky",
+    "la",
+    "nahi",
+    "vr",
+    "kr",
+    "trail",
+    "pn",
+    "madhe",
+    "have",
+    "te",
+    "bg",
+    "be",
+    "room",
+    "been",
+    "aircraft",
+    "ke"
+  ],
+  "short_reply_samples": [
+    "Congratulations brother",
+    "Good international rank",
+    "Jay shree ram",
+    "Bol na",
+    "Thode bahut",
+    "Kl cha adv nahi dila",
+    "Ho",
+    "Phaltu aahet re",
+    "Hn karto",
+    "1 ch sapadlay ppr",
+    "2 te pn",
+    "Camera he waisa he 🙂🙃"
+  ],
+  "preferred_greeting": "kaisa hai bhosdike",
+  "preferred_language": "hinglish",
+  "preferred_reply_length": "medium",
+  "emoji_rate_hint": "not much occasional",
+  "avoid_topics": [
+    "avoid politics"
+  ],
+  "tone_notes": "avoid politics",
+  "questionnaire_overrides": {
+    "preferred_greeting": "kaisa hai bhosdike",
+    "preferred_language": "hinglish",
+    "preferred_reply_length": "medium",
+    "slang_words": [
+      "bhai",
+      "bhosdike",
+      "gandu",
+      "bro"
+    ],
+    "humor_style": "playful",
+    "avoid_topics": [
+      "avoid politics"
+    ],
+    "tone_notes": "avoid politics"
+  }
+}

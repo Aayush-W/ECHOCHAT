@@ -1,24 +1,24 @@
 {
-  "total_messages": 662,
+  "total_messages": 474,
   "language_mixing": {
-    "hinglish_percentage": 2.719033232628399,
-    "english_only_percentage": 97.2809667673716,
-    "language_mixing_score": 2.719033232628399,
+    "hinglish_percentage": 3.79746835443038,
+    "english_only_percentage": 96.20253164556962,
+    "language_mixing_score": 3.79746835443038,
     "detected_hinglish_words": [
-      "ch",
-      "to",
-      "ho",
-      "jaun",
+      "ahe",
       "na",
-      "te",
-      "ka",
       "be",
+      "var",
+      "ata",
+      "gela",
+      "mazya",
       "saang",
-      "mazya"
+      "show",
+      "te"
     ]
   },
   "emoji_patterns": {
-    "emoji_usage_percentage": 3.1722054380664653,
+    "emoji_usage_percentage": 4.430379746835443,
     "top_emojis": [
       "😂",
       "✨",
@@ -48,79 +48,79 @@
       "middle": 3,
       "end": 11
     },
-    "avg_emojis_per_message": 0.11027190332326284
+    "avg_emojis_per_message": 0.1540084388185654
   },
   "sentence_structure": {
-    "avg_message_length": 71.79909365558912,
+    "avg_message_length": 81.63713080168776,
     "min_message_length": 1,
     "max_message_length": 6457,
-    "avg_words_per_message": 9.669184290030211,
-    "short_messages_percentage": 37.31117824773414,
-    "long_messages_percentage": 5.13595166163142,
+    "avg_words_per_message": 11.789029535864978,
+    "short_messages_percentage": 52.109704641350206,
+    "long_messages_percentage": 5.9071729957805905,
     "punctuation_style": {
-      "-": 598,
-      ".": 526,
-      ",": 292,
+      ".": 293,
+      ",": 287,
+      "-": 275,
       ";": 228,
-      ":": 190
+      ":": 187
     },
-    "multiline_percentage": 12.83987915407855
+    "multiline_percentage": 8.649789029535865
   },
   "humor_style": {
-    "sarcasm_indicators_percentage": 0.906344410876133,
+    "sarcasm_indicators_percentage": 1.2658227848101267,
     "self_deprecation_percentage": 0.0,
-    "casual_humor_percentage": 1.0574018126888218,
+    "casual_humor_percentage": 1.4767932489451476,
     "detected_sarcasm_words": [
-      "xd",
-      "haha",
-      "hehe",
-      "😂",
       "joke",
+      "rofl",
+      "xd",
+      "😂",
       "lol",
-      "rofl"
+      "haha",
+      "hehe"
     ],
-    "humor_style": "friendly"
+    "humor_style": "playful"
   },
   "emotional_patterns": {
-    "question_percentage": 7.250755287009064,
+    "question_percentage": 10.126582278481013,
     "exclamation_percentage": 0.0,
     "emotional_engagement": "moderate",
     "sentiment_tendency": "negative"
   },
   "topic_preferences": {
     "top_topics": [
-      "file",
-      "attached",
-      "img",
-      "jpg",
-      "pdf",
       "for",
       "digitalwrite",
       "int",
       "aahe",
       "https",
-      "20250614",
-      "this",
       "lcd",
       "low",
-      "data"
+      "define",
+      "data",
+      "with",
+      "pinmode",
+      "cha",
+      "void",
+      "com",
+      "const"
     ],
     "topic_keywords": {
-      "file": 176,
-      "attached": 172,
-      "img": 115,
-      "jpg": 115,
-      "pdf": 58,
       "for": 48,
       "digitalwrite": 44,
       "int": 42,
-      "aahe": 35,
-      "https": 35,
-      "20250614": 33,
-      "this": 31,
+      "aahe": 34,
+      "https": 32,
       "lcd": 31,
       "low": 26,
-      "data": 25
+      "define": 24,
+      "data": 23,
+      "with": 23,
+      "pinmode": 22,
+      "cha": 21,
+      "void": 21,
+      "com": 20,
+      "const": 20
     }
   },
   "response_characteristics": {

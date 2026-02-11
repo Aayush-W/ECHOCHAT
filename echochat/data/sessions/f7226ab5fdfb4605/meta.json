@@ -1,8 +1,13 @@
 {
   "echo_person": "Lady Parus",
   "message_count": 1115,
-  "echo_message_count": 662,
-  "training_pairs": 221,
-  "memory_entries": 662,
-  "updated_at": "2026-02-10T09:33:25.990883Z"
+  "echo_message_count": 474,
+  "training_pairs": 168,
+  "memory_entries": 474,
+  "persona_pack": "C:\\Users\\Aayush Walsangikar\\OneDrive\\Desktop\\ECHOCHAT\\echochat\\data\\sessions\\f7226ab5fdfb4605\\persona_pack.json",
+  "pipeline_version": "2026-02-10-clean-v3",
+  "updated_at": "2026-02-10T13:44:17.411511Z",
+  "questionnaire_training_job_id": "9af44c491989",
+  "questionnaire_completed": true,
+  "questionnaire_completed_at": "2026-02-11T08:07:27.896133Z"
 }

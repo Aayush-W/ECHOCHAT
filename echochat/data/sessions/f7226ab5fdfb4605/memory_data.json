@@ -154,28 +154,6 @@
     }
   },
   {
-    "text": "IMG-20240529-WA0011.jpg (file attached)",
-    "timestamp": "2024-05-29T21:34:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20240529-WA0012.jpg (file attached)",
-    "timestamp": "2024-05-29T21:34:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Atta lipstick vr cha photo bagun  .....l",
     "timestamp": "2024-05-29T21:35:00",
     "length": 40,
@@ -193,17 +171,6 @@
     "has_emoji": true,
     "context": {
       "word_count": 1,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2024-06-26T20:20:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
       "contains_code": false,
       "is_question": false
     }
@@ -388,7 +355,7 @@
     "text": "1.10+ 10",
     "timestamp": "2024-06-27T11:04:00",
     "length": 8,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 2,
       "contains_code": false,
@@ -817,7 +784,7 @@
     "text": "me*",
     "timestamp": "2024-09-10T08:09:00",
     "length": 3,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1279,7 +1246,7 @@
     "text": "1:30",
     "timestamp": "2024-09-19T08:39:00",
     "length": 4,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1433,7 +1400,7 @@
     "text": "https://maps.app.goo.gl/wt13b2iDgWfxn16e9",
     "timestamp": "2024-09-22T16:47:00",
     "length": 41,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1444,53 +1411,9 @@
     "text": "Kindly note, the *Club induction* has been *rescheduled* to *3 PM.*\nPlease ensure you *report* by *2:45 PM.*",
     "timestamp": "2024-09-23T13:55:00",
     "length": 108,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 18,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "STK-20240924-WA0000.webp (file attached)",
-    "timestamp": "2024-09-24T00:01:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "STK-20240718-WA0030.webp (file attached)",
-    "timestamp": "2024-09-24T00:03:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "STK-20240924-WA0001.webp (file attached)",
-    "timestamp": "2024-09-24T00:03:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "STK-20240924-WA0002.webp (file attached)",
-    "timestamp": "2024-09-24T00:04:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -1554,7 +1477,7 @@
     "text": "9/26/2024 2pm - 3pm\n Information Technology Artificial Intelligence and Data Science Computer Science and Engineering (Internet \nof Things and Cyber Security Including Block Chain Technology) ( All Division )\n Proficiency Modules: English and Soft \nSkill Prof. Shital Sahare https://tinyurl.com/ykhb57hh",
     "timestamp": "2024-09-25T20:37:00",
     "length": 303,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 39,
       "contains_code": false,
@@ -1565,7 +1488,7 @@
     "text": "https://krunker.io/?game=SYD:2dzdu",
     "timestamp": "2024-09-25T22:42:00",
     "length": 34,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1576,7 +1499,7 @@
     "text": "https://youtu.be/oEmD35XlsKU?si=_28MXXPRyEo7ijKm",
     "timestamp": "2024-10-02T01:13:00",
     "length": 48,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1631,7 +1554,7 @@
     "text": "To join the meeting on Google Meet, click this link:\nhttps://meet.google.com/hzb-zsda-mgo \nOr open Meet and enter this code: hzb-zsda-mgo\nMath session link",
     "timestamp": "2024-10-04T17:18:00",
     "length": 155,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 22,
       "contains_code": false,
@@ -1672,17 +1595,6 @@
     }
   },
   {
-    "text": "IMG-20241005-WA0031.jpg (file attached)\nNrupal \nTeam Griffin Indian",
-    "timestamp": "2024-10-05T23:40:00",
-    "length": 67,
-    "has_emoji": true,
-    "context": {
-      "word_count": 7,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Griffin",
     "timestamp": "2024-10-06T12:32:00",
     "length": 7,
@@ -1697,7 +1609,7 @@
     "text": "+919421589014",
     "timestamp": "2024-10-06T17:42:00",
     "length": 13,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -1774,7 +1686,7 @@
     "text": "U sent me 2000+500\n2200 was amt I am returning 250",
     "timestamp": "2024-10-09T01:51:00",
     "length": 50,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 11,
       "contains_code": false,
@@ -1785,7 +1697,7 @@
     "text": "300*",
     "timestamp": "2024-10-09T01:51:00",
     "length": 4,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2134,105 +2046,6 @@
     }
   },
   {
-    "text": "IMG-20241016-WA0009.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0021.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0020.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0019.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0018.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0017.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0016.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0015.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241016-WA0012.jpg (file attached)",
-    "timestamp": "2024-10-16T00:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Okay",
     "timestamp": "2024-10-17T15:07:00",
     "length": 4,
@@ -2258,7 +2071,7 @@
     "text": "https://forms.gle/YpiCFPm8CG5Ap1Tw9",
     "timestamp": "2024-10-18T00:02:00",
     "length": 35,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2357,7 +2170,7 @@
     "text": "https://drive.google.com/file/d/1eV_zrnnnSsBlnOhZSx-s2dEKG-SyAX8N/view",
     "timestamp": "2024-10-19T08:06:00",
     "length": 70,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2368,7 +2181,7 @@
     "text": "https://youtube.com/shorts/Uj5Ov_dhR7w?si=Up1QPiG08GtlH46_",
     "timestamp": "2024-10-20T05:54:00",
     "length": 58,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2486,17 +2299,6 @@
     }
   },
   {
-    "text": "This message was deleted",
-    "timestamp": "2024-11-09T16:15:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Shruti yekti nahi yet",
     "timestamp": "2024-11-09T20:00:00",
     "length": 21,
@@ -2511,7 +2313,7 @@
     "text": "https://youtube.com/playlist?list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&si=RbXyaSWGSiAAkz8A",
     "timestamp": "2024-11-09T21:56:00",
     "length": 88,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2530,50 +2332,6 @@
     }
   },
   {
-    "text": "CS-H.pdf (file attached)",
-    "timestamp": "2024-11-11T12:49:00",
-    "length": 24,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241112-WA0006.jpg (file attached)",
-    "timestamp": "2024-11-12T20:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241112-WA0008.jpg (file attached)",
-    "timestamp": "2024-11-12T20:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241112-WA0007.jpg (file attached)",
-    "timestamp": "2024-11-12T20:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Sir samor aahe",
     "timestamp": "2024-11-13T16:19:00",
     "length": 14,
@@ -2585,43 +2343,10 @@
     }
   },
   {
-    "text": "IMG-20241116-WA0000.jpg (file attached)",
-    "timestamp": "2024-11-16T04:49:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241122-WA0006.jpg (file attached)",
-    "timestamp": "2024-11-22T14:41:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "https://ci3.googleusercontent.com/meips/ADKq_NZclfAXh8hyTLN_zYkRrGxw-Tq0hS0JhyEKz65RuccMvU2VUMl4XXyTxk8m8pq1isgniRJblJvezhN1xoUc1WGIIyyxq1DMEw=s0-d-e1-ft#https://share1.cloudhq-mkt3.net/3ffa3be462ed63.png",
-    "timestamp": "2024-11-24T00:20:00",
-    "length": 204,
-    "has_emoji": true,
-    "context": {
-      "word_count": 1,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "https://docs.google.com/forms/d/e/1FAIpQLSfC6RKDNl03oTOIN23bX2QfK2optvYBQEfkWWf2uUzG6EZDIw/alreadyresponded",
     "timestamp": "2024-11-24T00:21:00",
     "length": 107,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2684,83 +2409,6 @@
     }
   },
   {
-    "text": "IMG-20241220-WA0001.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0007.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0006.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0005.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0004.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0003.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20241220-WA0002.jpg (file attached)",
-    "timestamp": "2024-12-20T12:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Paracetamol",
     "timestamp": "2024-12-20T22:52:00",
     "length": 11,
@@ -2775,7 +2423,7 @@
     "text": "90/- jayshree 4jan\n04/01/2025, 9:20 pm - Lady Parus pinned a message",
     "timestamp": "2025-01-04T21:19:00",
     "length": 68,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 12,
       "contains_code": false,
@@ -2874,7 +2522,7 @@
     "text": "https://maps.app.goo.gl/61zpNSTxNTL1cGb66",
     "timestamp": "2025-01-20T15:33:00",
     "length": 41,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2915,32 +2563,10 @@
     }
   },
   {
-    "text": "Earn and Sell Slots.pdf (file attached)",
-    "timestamp": "2025-01-26T20:25:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 6,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Earn and Sell Rulebook.pdf (file attached)",
-    "timestamp": "2025-01-26T20:25:00",
-    "length": 42,
-    "has_emoji": true,
-    "context": {
-      "word_count": 6,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "https://drive.google.com/drive/folders/1D_u9KYKRFCFJI5dDMBktvz9Gi2wcyfY7",
     "timestamp": "2025-01-26T20:25:00",
     "length": 72,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2951,7 +2577,7 @@
     "text": "https://drive.google.com/file/d/1rNdspeLn4pEgxyg_H-o0lL28lsAklGXQ/view?usp=sharing",
     "timestamp": "2025-02-01T15:21:00",
     "length": 82,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2962,7 +2588,7 @@
     "text": "https://docs.google.com/document/d/1_RiI3t1Rf2qEjnECxuQUVhfX_kbXWXAb-AKZR1gddyM/edit?usp=sharing",
     "timestamp": "2025-02-01T15:31:00",
     "length": 96,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2973,7 +2599,7 @@
     "text": "https://docs.google.com/document/d/1gfT3C14uVWA2xWDVBLEAtD8RAGGmNfMyO2nOhILbUSI/edit?usp=sharing",
     "timestamp": "2025-02-01T15:32:00",
     "length": 96,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -2984,31 +2610,9 @@
     "text": "https://docs.google.com/document/d/1BIFhh8V4DUEAut-_rsyklYqKnnJolBTzeUBy4p2ry2c/edit?usp=sharing",
     "timestamp": "2025-02-01T15:35:00",
     "length": 96,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250210-WA0147.jpg (file attached)",
-    "timestamp": "2025-02-10T19:41:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250210-WA0149.jpg (file attached)",
-    "timestamp": "2025-02-10T20:01:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -3036,210 +2640,12 @@
     }
   },
   {
-    "text": "IMG-20250217-WA0010.jpg (file attached)",
-    "timestamp": "2025-02-17T13:44:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Happy birthday 🎂",
     "timestamp": "2025-02-20T06:31:00",
     "length": 16,
     "has_emoji": true,
     "context": {
       "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250221-WA0026.jpg (file attached)",
-    "timestamp": "2025-02-21T16:44:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250228-WA0035.jpg (file attached)",
-    "timestamp": "2025-02-28T12:49:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250228-WA0036.jpg (file attached)",
-    "timestamp": "2025-02-28T12:51:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250228-WA0037.jpg (file attached)",
-    "timestamp": "2025-02-28T12:53:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250228-WA0039.jpg (file attached)",
-    "timestamp": "2025-02-28T12:56:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250228-WA0040.jpg (file attached)",
-    "timestamp": "2025-02-28T12:56:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0026.jpg (file attached)",
-    "timestamp": "2025-03-04T15:31:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0027.jpg (file attached)",
-    "timestamp": "2025-03-04T15:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0028.jpg (file attached)",
-    "timestamp": "2025-03-04T15:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0029.jpg (file attached)",
-    "timestamp": "2025-03-04T15:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0030.jpg (file attached)",
-    "timestamp": "2025-03-04T15:33:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250304-WA0031.jpg (file attached)",
-    "timestamp": "2025-03-04T15:34:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-03-10T09:30:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-03-10T09:30:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-03-10T09:30:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-03-10T09:30:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-03-10T09:30:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
       "contains_code": false,
       "is_question": false
     }
@@ -3270,31 +2676,9 @@
     "text": "Wheel : 21mm radius",
     "timestamp": "2025-03-21T14:54:00",
     "length": 19,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250321-WA0000.jpg (file attached)",
-    "timestamp": "2025-03-21T14:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250321-WA0001.jpg (file attached)",
-    "timestamp": "2025-03-21T14:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -3306,28 +2690,6 @@
     "has_emoji": false,
     "context": {
       "word_count": 2,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Bhagvat Aarti.pdf (file attached)\nBhagvat Aarti",
-    "timestamp": "2025-03-24T18:02:00",
-    "length": 47,
-    "has_emoji": true,
-    "context": {
-      "word_count": 6,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250324-WA0012.jpg (file attached)",
-    "timestamp": "2025-03-24T22:42:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -3347,7 +2709,7 @@
     "text": "https://youtu.be/1uM9K6CzXtI?si=A8IAL_ak8MPXVUhi",
     "timestamp": "2025-03-31T12:14:00",
     "length": 48,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3380,7 +2742,7 @@
     "text": "https://www.hackster.io/anova9347/line-follower-robot-with-pid-controller-cdedbd",
     "timestamp": "2025-04-07T15:37:00",
     "length": 80,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3396,17 +2758,6 @@
       "word_count": 6,
       "contains_code": false,
       "is_question": true
-    }
-  },
-  {
-    "text": "IMG-20250417-WA0010.jpg (file attached)",
-    "timestamp": "2025-04-17T14:55:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
     }
   },
   {
@@ -3531,32 +2882,10 @@
     }
   },
   {
-    "text": "IMG-20250422-WA0022.jpg (file attached)",
-    "timestamp": "2025-04-22T16:21:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250425-WA0032.jpg (file attached)",
-    "timestamp": "2025-04-25T22:20:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "#include <Wire.h>\n#include <LiquidCrystal_I2C.h>\n// LCD config: 0x27 is the common I2C address. Use 0x3F if 0x27 doesn’t work.\nLiquidCrystal_I2C lcd(0x27, 16, 2);\n// IR Sensor Pins\nconst int L2 = A0;\nconst int L1 = A1;\nconst int C  = A2;\nconst int R1 = A3;\nconst int R2 = 12; // Using D12 for R2\n// Motor Pins (connected to L298N)\nconst int IN1 = 8;\nconst int IN2 = 9;\nconst int IN3 = 10;\nconst int IN4 = 11;\nvoid setup() {\n  // LCD setup\n  lcd.init();\n  lcd.backlight();\n  lcd.setCursor(0, 0);\n  lcd.print(\"Line Follower\");\n  // IR sensors\n  pinMode(L2, INPUT);\n  pinMode(L1, INPUT);\n  pinMode(C, INPUT);\n  pinMode(R1, INPUT);\n  pinMode(R2, INPUT);\n  // Motor pins\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(IN3, OUTPUT);\n  pinMode(IN4, OUTPUT);\n}\nvoid loop() {\n  int l2 = digitalRead(L2);\n  int l1 = digitalRead(L1);\n  int c  = digitalRead(C);\n  int r1 = digitalRead(R1);\n  int r2 = digitalRead(R2);\n  // Forward\n  if (l1 == 1 && c == 0 && r1 == 1) {\n    moveForward();\n    showLCD(\"Moving Forward\");\n  }\n  // Slight Left\n  else if (l1 == 0 && c == 0) {\n    slightLeft();\n    showLCD(\"Slight Left\");\n  }\n  // Sharp Left\n  else if (l2 == 0) {\n    turnLeft();\n    showLCD(\"Sharp Left\");\n  }\n  // Slight Right\n  else if (r1 == 0 && c == 0) {\n    slightRight();\n    showLCD(\"Slight Right\");\n  }\n  // Sharp Right\n  else if (r2 == 0) {\n    turnRight();\n    showLCD(\"Sharp Right\");\n  }\n  // Stop if no line detected\n  else {\n    stopMotors();\n    showLCD(\"Stopped / Lost\");\n  }\n}\n// -------------------- Motor Control Functions --------------------\nvoid moveForward() {\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid slightLeft() {\n  digitalWrite(IN1, LOW);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid slightRight() {\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, LOW);\n  digitalWrite(IN4, LOW);\n}\nvoid turnLeft() {\n  digitalWrite(IN1, LOW);\n  digitalWrite(IN2, HIGH);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid turnRight() {\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, LOW);\n  digitalWrite(IN4, HIGH);\n}\nvoid stopMotors() {\n  digitalWrite(IN1, LOW);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, LOW);\n  digitalWrite(IN4, LOW);\n}\n// -------------------- LCD Display Helper --------------------\nvoid showLCD(String message) {\n  lcd.clear();\n  lcd.setCursor(0, 0);\n  lcd.print(message);\n}",
     "timestamp": "2025-04-30T17:08:00",
     "length": 2478,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 329,
       "contains_code": true,
@@ -3608,17 +2937,6 @@
     }
   },
   {
-    "text": "AUD-20250509-WA0068.m4a (file attached)",
-    "timestamp": "2025-05-09T18:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Mongoes photo",
     "timestamp": "2025-05-10T11:15:00",
     "length": 13,
@@ -3633,7 +2951,7 @@
     "text": "+918605201669",
     "timestamp": "2025-05-12T07:03:00",
     "length": 13,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3666,7 +2984,7 @@
     "text": "https://www.booking.com/Share-HOPEDva",
     "timestamp": "2025-05-18T17:32:00",
     "length": 37,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3688,7 +3006,7 @@
     "text": "https://www.booking.com/Share-h1tsjcj",
     "timestamp": "2025-05-18T17:34:00",
     "length": 37,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3699,7 +3017,7 @@
     "text": "https://www.booking.com/Share-HPR51V",
     "timestamp": "2025-05-18T17:35:00",
     "length": 36,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3718,175 +3036,10 @@
     }
   },
   {
-    "text": "IMG-20250522-WA0017.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0018.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0019.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250427-WA0226.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0020.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0021.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0022.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250210-WA0102.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0023.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250522-WA0024.jpg (file attached)",
-    "timestamp": "2025-05-22T21:28:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Notice - Infosys Springboard Courses - SEM 2.docx (file attached)\nNotice - Infosys Springboard Courses - SEM 2.docx",
-    "timestamp": "2025-05-23T22:54:00",
-    "length": 115,
-    "has_emoji": true,
-    "context": {
-      "word_count": 18,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-05-27T17:03:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-05-27T17:03:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-05-27T17:03:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-05-27T17:05:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "| IR Sensor    | Arduino Digital Pin |\n| ------------ | ------------------- |\n| Leftmost     | 2                   |\n| Left-Center  | 4                   |\n| Center       | 7                   |\n| Right-Center | 8                   |\n| Rightmost    | 12                  |",
     "timestamp": "2025-05-27T17:12:00",
     "length": 272,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 38,
       "contains_code": false,
@@ -3897,7 +3050,7 @@
     "text": "#include <SoftwareWire.h>                 // Use software I2C\n#include <LiquidCrystal_I2C.h>           // LCD library\n// Define software I2C pins\n#define SDA_PIN 6\n#define SCL_PIN 7\nSoftwareWire myWire(SDA_PIN, SCL_PIN);   // SDA, SCL\nLiquidCrystal_I2C lcd(0x27, 16, 2);      // Typical I2C LCD address\nvoid setup() {\n  lcd.begin(&myWire);     // Initialize with software I2C\n  lcd.backlight();\n  lcd.setCursor(0, 0);\n  lcd.print(\"Line Follower\");\n}",
     "timestamp": "2025-05-27T17:12:00",
     "length": 449,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 52,
       "contains_code": true,
@@ -3908,7 +3061,7 @@
     "text": "| LCD Pin | Arduino Pin |\n| ------- | ----------- |\n| VCC     | 5V          |\n| GND     | GND         |\n| SDA     | A4          |\n| SCL     | A5          |",
     "timestamp": "2025-05-27T17:12:00",
     "length": 155,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 32,
       "contains_code": false,
@@ -3919,7 +3072,7 @@
     "text": "| Signal | Arduino Pin |\n| ------ | ----------- |\n| ENA    | 11 (PWM)    |\n| IN1    | 9           |\n| IN2    | 10          |\n| ENB    | 3 (PWM)     |\n| IN3    | 6           |\n| IN4    | 5           |",
     "timestamp": "2025-05-27T17:12:00",
     "length": 199,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 43,
       "contains_code": false,
@@ -3930,21 +3083,10 @@
     "text": "#include <Wire.h>\n#include <LiquidCrystal_I2C.h>\nLiquidCrystal_I2C lcd(0x27, 16, 2);\n// IR sensors (Digital pins)\nconst int ir1 = 2;  // Left\nconst int ir2 = 4;\nconst int ir3 = 7;  // Center\nconst int ir4 = 8;\nconst int ir5 = 12; // Right\n// Motors\nconst int ENA = 11;\nconst int IN1 = 9;\nconst int IN2 = 10;\nconst int ENB = 3;\nconst int IN3 = 6;\nconst int IN4 = 5;\nint speedL = 150;\nint speedR = 150;\nvoid setup() {\n  lcd.init();\n  lcd.backlight();\n  lcd.setCursor(0,0);\n  lcd.print(\"Line Follower\");\n  pinMode(ir1, INPUT);\n  pinMode(ir2, INPUT);\n  pinMode(ir3, INPUT);\n  pinMode(ir4, INPUT);\n  pinMode(ir5, INPUT);\n  pinMode(ENA, OUTPUT);\n  pinMode(IN1, OUTPUT);\n  pinMode(IN2, OUTPUT);\n  pinMode(ENB, OUTPUT);\n  pinMode(IN3, OUTPUT);\n  pinMode(IN4, OUTPUT);\n}\nvoid loop() {\n  int s1 = digitalRead(ir1);\n  int s2 = digitalRead(ir2);\n  int s3 = digitalRead(ir3);\n  int s4 = digitalRead(ir4);\n  int s5 = digitalRead(ir5);\n  lcd.setCursor(0, 1);\n  lcd.print(\"S:\");\n  lcd.print(s1);\n  lcd.print(s2);\n  lcd.print(s3);\n  lcd.print(s4);\n  lcd.print(s5);\n  if (s3 == 0 && s2 == 1 && s4 == 1) {\n    moveForward();\n  }\n  else if (s2 == 0 && s1 == 1) {\n    turnLeft();\n  }\n  else if (s1 == 0) {\n    sharpLeft();\n  }\n  else if (s4 == 0 && s5 == 1) {\n    turnRight();\n  }\n  else if (s5 == 0) {\n    sharpRight();\n  }\n  else {\n    stopMotors();\n  }\n  delay(100);\n}\nvoid moveForward() {\n  analogWrite(ENA, speedL);\n  analogWrite(ENB, speedR);\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid turnLeft() {\n  analogWrite(ENA, speedL / 2);\n  analogWrite(ENB, speedR);\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid sharpLeft() {\n  analogWrite(ENA, speedL);\n  analogWrite(ENB, speedR);\n  digitalWrite(IN1, LOW);\n  digitalWrite(IN2, HIGH);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid turnRight() {\n  analogWrite(ENA, speedL);\n  analogWrite(ENB, speedR / 2);\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, HIGH);\n  digitalWrite(IN4, LOW);\n}\nvoid sharpRight() {\n  analogWrite(ENA, speedL);\n  analogWrite(ENB, speedR);\n  digitalWrite(IN1, HIGH);\n  digitalWrite(IN2, LOW);\n  digitalWrite(IN3, LOW);\n  digitalWrite(IN4, HIGH);\n}\nvoid stopMotors() {\n  analogWrite(ENA, 0);\n  analogWrite(ENB, 0);\n}",
     "timestamp": "2025-05-27T17:24:00",
     "length": 2343,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 299,
       "contains_code": true,
-      "is_question": false
-    }
-  },
-  {
-    "text": "PARAS_DXF.DXF (file attached)\nPARAS_DXF.DXF",
-    "timestamp": "2025-05-27T19:14:00",
-    "length": 43,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
       "is_question": false
     }
   },
@@ -3960,21 +3102,10 @@
     }
   },
   {
-    "text": "AE Course Project Report Format AY 24-25.docx (file attached)",
-    "timestamp": "2025-05-27T20:04:00",
-    "length": 61,
-    "has_emoji": true,
-    "context": {
-      "word_count": 9,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "https://youtu.be/F02hrB09yg0?si=HB68CTBH-nBaaBLA",
     "timestamp": "2025-05-27T20:12:00",
     "length": 48,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -3985,395 +3116,10 @@
     "text": "//Arduino Human Following Robot\n// You have to install the AFMotor and NewPing library Before Uploading the sketch\n// You can find all the required libraris from arduino library manager.\n// Contact me on instagram for any query(Insta Id : prateek.815)\n//include the library code:\n#include<NewPing.h>           \n#include<Servo.h>             \n#include<AFMotor.h>           \n#define LEFT A5             // Right IR sensor connected to analog pin A2 of Arduino Uno:\n#define RIGHT A1              // Left IR sensor connected to analog pin A3 of Arduino Uno:\n#define TRIGGER_PIN A2        // Trigger pin connected to analog pin A1 of Arduino Uno:\n#define ECHO_PIN A3           // Echo pin connected to analog pin A0 of Arduino Uno:\n#define MAX_DISTANCE 200      // Maximum ping distance:\nunsigned int distance = 0;    //Variable to store ultrasonic sensor distance:\nunsigned int Right_Value = 0; //Variable to store Right IR sensor value:\nunsigned int Left_Value = 0;  //Variable to store Left IR sensor value:\n int d=10;\nNewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);  //NewPing setup of pins and maximum distance:\n//create motor objects\nAF_DCMotor Motor1(1,MOTOR12_1KHZ);\nAF_DCMotor Motor2(2,MOTOR12_1KHZ);\nAF_DCMotor Motor3(3,MOTOR34_1KHZ);\nAF_DCMotor Motor4(4,MOTOR34_1KHZ);\n Servo myservo; //create servo object to control the servo:\n int pos=0;     //variable to store the servo position:\nvoid setup() { // the setup function runs only once when power on the board or reset the board:\n   Serial.begin(9600); //initailize serial communication at 9600 bits per second:\n   myservo.attach(10); // servo attached to pin 10 of Arduino UNO\n{\nfor(pos = 90; pos <= 180; pos += 1){    // goes from 90 degrees to 180 degrees:\n  myservo.write(pos);                   //tell servo to move according to the value of 'pos' variable:\n  delay(15);                            //wait 15ms for the servo to reach the position:\n  } \nfor(pos = 180; pos >= 0; pos-= 1) {     // goes from 180 degrees to 0 degrees:\n  myservo.write(pos);                   //tell servo to move according to the value of 'pos' variable:\n  delay(15);                            //wait 15ms for the servo to reach the position:\n  }\nfor(pos = 0; pos<=90; pos += 1) {       //goes from 180 degrees to 0 degrees:\n  myservo.write(pos);                   //tell servo to move according to the value of 'pos' variable:\n  delay(15);                            //wait 15ms for the servo to reach the position:\n  }\n}\n   pinMode(RIGHT, INPUT); //set analog pin RIGHT as an input:\n   pinMode(LEFT, INPUT);  //set analog pin RIGHT as an input:\n   stop();\n}\n// the lope function runs forever\nvoid loop() {                             \ndelay(50);                                        //wait 50ms between pings:\ndistance = sonar.ping_cm();                       //send ping, get distance in cm and store it in 'distance' variable:\nSerial.print(\"distance\");                   \nSerial.println(distance);                         // print the distance in serial monitor:\n    Right_Value = !digitalRead(RIGHT);             // read the value from Right IR sensor:\n    Left_Value = !digitalRead(LEFT);               // read the value from Left IR sensor:\nSerial.print(\"RIGHT\");                      \nSerial.println(Right_Value);                      // print the right IR sensor value in serial monitor:\nSerial.print(\"LEFT\");                       \nSerial.println(Left_Value);                       //print the left IR sensor value in serial monitor:\nif((distance > 1) && (distance < d)){            //check wheather the ultrasonic sensor's value stays between 1 to 15.\n                                                  //If the condition is 'true' then the statement below will execute:\n  //Move Forward:\n  Motor1.setSpeed(130);  //define motor1 speed:\n  Motor1.run(FORWARD);   //rotate motor1 clockwise:\n  Motor2.setSpeed(130);  //define motor2 speed:\n  Motor2.run(FORWARD);   //rotate motor2 clockwise:\n  Motor3.setSpeed(130);  //define motor3 speed:\n  Motor3.run(FORWARD);   //rotate motor3 clockwise:\n  Motor4.setSpeed(130);  //define motor4 speed:\n  Motor4.run(FORWARD);   //rotate motor4 clockwise:\n}else if((Right_Value==1) && (Left_Value==0)) {   //If the condition is 'true' then the statement below will execute:\n  //Turn right                                                \n  Motor1.setSpeed(150);  //define motor1 speed:\n  Motor1.run(FORWARD);   //rotate motor1 cloclwise:\n  Motor2.setSpeed(150);  //define motor2 speed:\n  Motor2.run(FORWARD);   //rotate motor2 clockwise:\n  Motor3.setSpeed(150);  //define motor3 speed:\n  Motor3.run(BACKWARD);  //rotate motor3 anticlockwise:\n  Motor4.setSpeed(150);  //define motor4 speed:\n  Motor4.run(BACKWARD);  //rotate motor4 anticlockwise:\n  delay(150);\n}else if((Right_Value==0)&&(Left_Value==1)) {     //If the condition is 'true' then the statement below will execute:\n  //Turn left\n  Motor1.setSpeed(150);  //define motor1 speed:\n  Motor1.run(BACKWARD);  //rotate motor1 anticlockwise:\n  Motor2.setSpeed(150);  //define motor2 speed:\n  Motor2.run(BACKWARD);  //rotate motor2 anticlockwise:\n  Motor3.setSpeed(150);  //define motor3 speed:\n  Motor3.run(FORWARD);   //rotate motor3 clockwise:\n  Motor4.setSpeed(150);  //define motor4 speed:\n  Motor4.run(FORWARD);   //rotate motor4 clockwise:\n  delay(150);\n}else if(distance > d) {                          //If the condition is 'true' then the statement below will execute:\nstop();\n}\n}\nvoid stop(){\n    //Stop\n  Motor1.setSpeed(0);    //define motor1 speed:\n  Motor1.run(RELEASE);   //stop motor1:\n  Motor2.setSpeed(0);    //define motor2 speed:\n  Motor2.run(RELEASE);   //stop motor2:\n  Motor3.setSpeed(0);    //define motor3 speed:\n  Motor3.run(RELEASE);   //stop motor3:\n  Motor4.setSpeed(0);    //define motor4 speed:\n  Motor4.run(RELEASE);   //stop motor4:\n}",
     "timestamp": "2025-05-27T20:13:00",
     "length": 5811,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 664,
       "contains_code": true,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250612-WA0008.jpg (file attached)",
-    "timestamp": "2025-06-12T13:04:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250612-WA0009.jpg (file attached)",
-    "timestamp": "2025-06-12T13:04:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0002.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0049.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0048.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0047.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0046.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0045.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0003.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0044.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0004.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0005.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0041.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0040.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0006.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0039.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0038.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0036.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0035.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0034.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0008.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0031.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0028.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0010.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0025.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0011.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0024.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0023.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0012.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0020.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0018.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0016.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0015.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0014.jpg (file attached)",
-    "timestamp": "2025-06-14T01:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250614-WA0097.jpg (file attached)",
-    "timestamp": "2025-06-14T14:21:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
       "is_question": false
     }
   },
@@ -4382,17 +3128,6 @@
     "timestamp": "2025-06-14T14:21:00",
     "length": 12,
     "has_emoji": false,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "VID-20250616-WA0013.mp4 (file attached)",
-    "timestamp": "2025-06-16T20:43:00",
-    "length": 39,
-    "has_emoji": true,
     "context": {
       "word_count": 3,
       "contains_code": false,
@@ -4455,61 +3190,6 @@
     }
   },
   {
-    "text": "IMG-20250618-WA0013.jpg (file attached)",
-    "timestamp": "2025-06-18T23:00:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250618-WA0014.jpg (file attached)",
-    "timestamp": "2025-06-18T23:03:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250618-WA0015.jpg (file attached)",
-    "timestamp": "2025-06-18T23:12:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "main.py (file attached)\nmain.py",
-    "timestamp": "2025-06-18T23:12:00",
-    "length": 31,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "make a folder , add file of pda named as cutoff.pdf as saved",
-    "timestamp": "2025-06-18T23:12:00",
-    "length": 60,
-    "has_emoji": false,
-    "context": {
-      "word_count": 13,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "and try run once on ur pc",
     "timestamp": "2025-06-18T23:13:00",
     "length": 25,
@@ -4560,17 +3240,6 @@
     "has_emoji": false,
     "context": {
       "word_count": 2,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "round3.pdf (file attached)\ncutoff.pdf",
-    "timestamp": "2025-06-18T23:14:00",
-    "length": 37,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
       "contains_code": false,
       "is_question": false
     }
@@ -4887,7 +3556,7 @@
     "text": "+91 512 6792600",
     "timestamp": "2025-06-28T16:55:00",
     "length": 15,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 3,
       "contains_code": false,
@@ -4953,31 +3622,9 @@
     "text": "https://youtu.be/07Kdg7uu9IM?si=iKP4nPz7AZGfIKVE",
     "timestamp": "2025-07-09T11:11:00",
     "length": 48,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250710-WA0008.jpg (file attached)",
-    "timestamp": "2025-07-10T22:35:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250710-WA0009.jpg (file attached)",
-    "timestamp": "2025-07-10T22:35:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -5071,17 +3718,6 @@
     }
   },
   {
-    "text": "PTT-20250722-WA0003.opus (file attached)",
-    "timestamp": "2025-07-22T12:20:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "15 min max",
     "timestamp": "2025-07-22T12:38:00",
     "length": 10,
@@ -5096,7 +3732,7 @@
     "text": "You've identified a very common and critical problem in many organizations: **\"Projects are managed using scattered tools and manual methods, leading to poor visibility, tracking challenges, missed deadlines, and inefficient resource utilization.\"**\nThis is a classic case where an integrated **Project Management Application (PMA)**, especially one leveraging AI/ML, can bring immense value.\nHere's a comprehensive approach to solve this problem, broken down into what an AI/ML-powered Project Management Application would do:\n## Solving the Project Management Problem with an AI/ML Application\nThe core solution is to develop and implement an **integrated digital platform** that centralizes project data, automates tasks, and provides intelligent insights.\n### 1. Centralized Data Management & Integration\n* **Problem Addressed:** \"Scattered tools and manual methods.\"\n* **Solution:**\n    * **Single Source of Truth:** Create a central database for all project-related information: tasks, timelines, resources, budgets, risks, issues, documents, communication logs.\n    * **Tool Integration:** Develop APIs or connectors to integrate with existing essential tools (e.g., communication platforms like Slack/Teams, code repositories like Git, CRM systems, accounting software). This avoids manual data transfer and ensures data consistency.\n    * **Standardized Data Entry:** Implement structured forms and templates for task creation, progress updates, and resource allocation to ensure consistent data quality.\n### 2. Enhanced Visibility & Reporting (Addressing \"Poor Visibility\")\n* **Problem Addressed:** \"Poor visibility.\"\n* **Solution:**\n    * **Interactive Dashboards:** Create real-time dashboards that provide a holistic view of all projects or specific projects.\n        * **Project Health:** RAG (Red/Amber/Green) status, completion percentage.\n        * **Timeline View:** Gantt charts, Kanban boards, or calendar views showing progress against schedule.\n        * **Resource Allocation:** Who is working on what, their current load.\n        * **Budget vs. Actuals:** Financial tracking.\n    * **Customizable Reports:** Allow users to generate on-demand reports on various aspects: task completion, team performance, budget burn, risk status.\n    * **Automated Reporting:** Schedule and send regular summary reports to stakeholders.\n### 3. Intelligent Tracking & Progress Monitoring (Addressing \"Tracking Challenges\")\n* **Problem Addressed:** \"Tracking challenges.\"\n* **Solution:**\n    * **Automated Progress Updates:** Integrate with tools (e.g., code commits, file updates, time tracking) to automatically update task progress where possible.\n    * **AI-Powered Anomaly Detection:**\n        * **Flagging Deviations:** An AI model can analyze historical project data and current progress to identify tasks or projects that are deviating from their planned path (e.g., taking too long, consuming too many resources, not hitting milestones).\n        * **Early Warning System:** Proactively alert project managers to potential issues *before* they become critical problems.\n    * **Dependency Management:** Automatically identify and visualize task dependencies. Alert if a preceding task is delayed, impacting subsequent tasks.\n### 4. Predictive Scheduling & Risk Mitigation (Addressing \"Missed Deadlines\")\n* **Problem Addressed:** \"Missed deadlines.\"\n* **AI/ML Solution:**\n    * **Predictive Analytics for Timelines:** Based on historical data (similar tasks, similar team members, past performance), AI can predict the most likely completion date for tasks and projects, offering more realistic estimates.\n    * **Risk Prediction:** AI can identify patterns in past projects that led to delays or failures (e.g., specific task types, resource conflicts, external dependencies) and flag similar patterns in current projects as potential risks.\n    * **Scenario Planning:** Allow project managers to simulate \"what-if\" scenarios (e.g., \"What if this task is delayed by 3 days?\") and see the predicted impact on the overall timeline.\n    * **Proactive Recommendations:** The system can suggest actions to mitigate predicted risks or recover from potential delays (e.g., reallocating resources, adjusting task priorities).\n### 5. Optimized Resource Allocation & Utilization (Addressing \"Inefficient Resource Utilization\")\n* **Problem Addressed:** \"Inefficient resource utilization.\"\n* **AI/ML Solution:**\n    * **Resource Skill Mapping:** Maintain a database of team members' skills, availability, and workload.\n    * **Intelligent Resource Allocation:** An AI algorithm can suggest the optimal team members for specific tasks based on their skills, current workload, and project priorities, preventing both over-allocation and under-utilization.\n    * **Workload Balancing:** Identify bottlenecks where a few resources are overloaded while others are underutilized, and suggest re-balancing.\n    * **Capacity Planning:** Provide insights into future resource needs based on the project pipeline, helping management plan hiring or training.\n    * **Performance Analytics:** Analyze individual and team performance over time to identify areas for improvement or training needs.\n### Example Components of an AI/ML Project Management Application:\n* **Frontend (User Interface):** Web-based application (React, Angular, Vue.js), potentially mobile apps.\n* **Backend (Application Logic):** Python (with Flask/Django), Node.js, Java, .NET.\n* **Database:** Relational (PostgreSQL, MySQL) for structured project data, potentially NoSQL (MongoDB) for flexible task details or unstructured notes.\n* **AI/ML Core:** Python with libraries like:\n    * **Scikit-learn:** For predictive modeling (regression, classification), clustering (for resource grouping).\n    * **TensorFlow/PyTorch:** For more complex deep learning models if needed (e.g., natural language processing for analyzing project communications or risk descriptions).\n    * **Pandas/NumPy:** For data manipulation and analysis.\n* **Data Visualization:** Matplotlib, Seaborn (for internal analytics), or integration with business intelligence tools like Tableau/Power BI.\n* **Cloud Platform:** AWS, Azure, GCP for scalability, managed services (databases, ML services).\n* **Version Control:** Git/GitHub for code management.\nBy building an application with these features, you transform project management from a chaotic, manual process into a streamlined, insight-driven, and proactive operation.",
     "timestamp": "2025-07-24T22:31:00",
     "length": 6457,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 828,
       "contains_code": false,
@@ -5107,7 +3743,7 @@
     "text": "| Layer     | Tools                                   |\n| --------- | --------------------------------------- |\n| Frontend  | React, Angular, or Flutter              |\n| Backend   | Node.js / Django / Spring Boot          |\n| Database  | PostgreSQL or MongoDB                   |\n| Hosting   | AWS / Azure / Firebase                  |\n| Analytics | Power BI / Metabase / Custom Dashboards |",
     "timestamp": "2025-07-24T22:32:00",
     "length": 391,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 55,
       "contains_code": false,
@@ -5118,7 +3754,7 @@
     "text": "Subject: Re: [Original Subject of the Problem Statement Email] - Report Submission\nDear [Recipient's Name],\nThank you for your patience.\nI hope this email finds you well.\nPlease find attached the report addressing the problem statement regarding \"[Brief description of the problem statement]\".\nThis report details [mention key aspects, e.g., our findings, analysis, proposed solutions, or progress made]. We have aimed to provide a comprehensive overview and actionable insights.\nPlease let me know if you have any questions or require further clarification after reviewing the document.\nBest regards,\n[Your Name]\n[Your Title/Department]\nMHT-CET_College_Predictions (4).xlsx",
     "timestamp": "2025-07-25T02:54:00",
     "length": 674,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 94,
       "contains_code": false,
@@ -5145,50 +3781,6 @@
       "word_count": 5,
       "contains_code": false,
       "is_question": true
-    }
-  },
-  {
-    "text": "gg.pdf (file attached)\ngg.pdf\nHUNDEKAR SHRINIWAS.xlsx",
-    "timestamp": "2025-07-26T16:49:00",
-    "length": 53,
-    "has_emoji": true,
-    "context": {
-      "word_count": 6,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted\nHAKKE SHANKAR ANNARAO.xlsx",
-    "timestamp": "2025-07-26T20:22:00",
-    "length": 51,
-    "has_emoji": false,
-    "context": {
-      "word_count": 7,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "_.__ State Common Entrance Test Cell, Government of Maharashtra __._.pdf (file attached)\n_.__ State Common Entrance Test Cell, Government of Maharashtra __._.pdf",
-    "timestamp": "2025-07-27T13:22:00",
-    "length": 161,
-    "has_emoji": true,
-    "context": {
-      "word_count": 22,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "_.__ State Common Entrance Test Cell, Government of Maharashtra __._-1.pdf (file attached)\n_.__ State Common Entrance Test Cell, Government of Maharashtra __._.pdf\nGIRI HARSHVARDHAN HARI.pdf\nVARSHA.xlsx",
-    "timestamp": "2025-07-27T13:46:00",
-    "length": 202,
-    "has_emoji": true,
-    "context": {
-      "word_count": 26,
-      "contains_code": false,
-      "is_question": false
     }
   },
   {
@@ -5225,34 +3817,12 @@
     }
   },
   {
-    "text": "IMG-20250731-WA0008.jpg (file attached)",
-    "timestamp": "2025-07-31T21:00:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "live location shared",
     "timestamp": "2025-07-31T21:02:00",
     "length": 20,
     "has_emoji": false,
     "context": {
       "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-08-01T02:12:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
       "contains_code": false,
       "is_question": false
     }
@@ -5294,40 +3864,7 @@
     "text": "+91 92099 88236\nWatsapp",
     "timestamp": "2025-08-01T02:12:00",
     "length": 23,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "NITCUTOFF.pdf (file attached)\nNITCUTOFF.pdf",
-    "timestamp": "2025-08-01T19:34:00",
-    "length": 43,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "2025073028.pdf (file attached)\n2025073028.pdf",
-    "timestamp": "2025-08-01T19:34:00",
-    "length": 45,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Document 115.pdf (file attached)",
-    "timestamp": "2025-08-02T21:44:00",
-    "length": 32,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 4,
       "contains_code": false,
@@ -5346,17 +3883,6 @@
     }
   },
   {
-    "text": "IMG-20250803-WA0011.jpg (file attached)",
-    "timestamp": "2025-08-03T21:17:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "🎓 Navigating college admissions after MHT-CET can be overwhelming. With cutoffs, reservations, and changing trends, students and parents often find themselves uncertain about the next step.\nTo address this common challenge, our team has developed an intelligent MHT-CET Rank & College Predictor — a paid, data-driven tool that offers accurate and branch-specific college predictions based on your percentile and preferences.\nDesigned to ease the burden of decision-making, the tool delivers results in seconds through a clean and user-friendly interface. It aims to empower students with clarity and control in their admission journey.\nThis initiative was brought to life by [Name 1], [Name 2], [Name 3], and [Name 4], with a shared goal of making educational planning more transparent and accessible.\n🔗 Explore the predictor: [Insert Your Website URL Here]\n#MHTCET #CollegeAdmissions #EngineeringAspirants #StudentSuccess #EdTechIndia #MHAdmissionTool #CareerGuidance",
     "timestamp": "2025-08-05T02:12:00",
     "length": 968,
@@ -5371,7 +3897,7 @@
     "text": "https://16012006paras.github.io/MHT-CET-predicator/",
     "timestamp": "2025-08-05T02:14:00",
     "length": 51,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -5390,144 +3916,12 @@
     }
   },
   {
-    "text": "Screenshot 2025-08-05 021706.png (file attached)\nScreenshot 2025-08-05 021706.png",
-    "timestamp": "2025-08-05T02:28:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Screenshot 2025-08-05 021642.png (file attached)\nScreenshot 2025-08-05 021642.png",
-    "timestamp": "2025-08-05T02:28:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Screenshot 2025-08-05 022919.png (file attached)\nScreenshot 2025-08-05 022919.png",
-    "timestamp": "2025-08-05T02:33:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Screenshot 2025-08-05 023005.png (file attached)\nScreenshot 2025-08-05 023005.png",
-    "timestamp": "2025-08-05T02:33:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "This message was deleted",
-    "timestamp": "2025-08-05T02:39:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250805-WA0001.jpg (file attached)",
-    "timestamp": "2025-08-05T02:40:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Screenshot 2025-08-05 024001.png (file attached)\nScreenshot 2025-08-05 024001.png",
-    "timestamp": "2025-08-05T02:42:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "asignment1_deamlab_63.docx (file attached)\nasignment1_deamlab_63.docx",
-    "timestamp": "2025-08-07T12:48:00",
-    "length": 69,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "ASSIGNMENT2_63.docx (file attached)\nASSIGNMENT2_63.docx",
-    "timestamp": "2025-08-07T12:48:00",
-    "length": 55,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "mala ds che assignment 3 che question send kr",
     "timestamp": "2025-08-12T16:05:00",
     "length": 45,
     "has_emoji": false,
     "context": {
       "word_count": 9,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "ParasPatil_63_ITD_ASSIGNMENT2.docx (file attached)\nParasPatil_63_ITD_ASSIGNMENT2.docx",
-    "timestamp": "2025-08-12T16:11:00",
-    "length": 85,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "ParasPatil_63_ITD_ASSIGNMENT3.docx (file attached)\nParasPatil_63_ITD_ASSIGNMENT3.docx",
-    "timestamp": "2025-08-12T16:11:00",
-    "length": 85,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250813-WA0000.jpg (file attached)",
-    "timestamp": "2025-08-13T10:33:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -5602,7 +3996,7 @@
     "text": "Test-1/Online diya he",
     "timestamp": "2025-08-13T20:38:00",
     "length": 21,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 3,
       "contains_code": false,
@@ -5665,17 +4059,6 @@
     }
   },
   {
-    "text": "This message was deleted",
-    "timestamp": "2025-08-18T20:12:00",
-    "length": 24,
-    "has_emoji": false,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Kitne",
     "timestamp": "2025-08-18T20:12:00",
     "length": 5,
@@ -5709,17 +4092,6 @@
     }
   },
   {
-    "text": "IMG-20250819-WA0010.jpg (file attached)",
-    "timestamp": "2025-08-19T22:06:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "refer for unit -2 Permutations combinations peigonhole and conditional probability",
     "timestamp": "2025-08-19T22:12:00",
     "length": 82,
@@ -5731,32 +4103,10 @@
     }
   },
   {
-    "text": "ASSIGNMENT3_63.docx (file attached)\nASSIGNMENT3_63.docx",
-    "timestamp": "2025-08-21T19:31:00",
-    "length": 55,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "asignment1_deamlab_63-1.docx (file attached)\nasignment1_deamlab_63.docx\nASSIGNMENT2_63.docx",
-    "timestamp": "2025-08-21T19:31:00",
-    "length": 91,
-    "has_emoji": true,
-    "context": {
-      "word_count": 5,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "4) Let p, q, and r be the propositions\np: Grizzly bears have been seen in the area. \nq: Hiking is safe on the trail. \nr: Berries are ripe along the trail. \nWrite these propositions using p, q, and r and logical connectives. \na) Berries are ripe along the trail, but grizzly bears have not been \nseen in the area. \nb) Grizzly bears have not been seen in the area and hiking on the \ntrail is safe, but berries are ripe along the trail. \nc) If berries are ripe along the trail, hiking is safe if and only if grizzly \nbears have not been seen in the area. \nd) It is not safe to hike on the trail, but grizzly bears have not been \nseen in the area and the berries along the trail are ripe. \ne) For hiking on the trail to be safe, it is necessary but not sufficient \nthat berries not be ripe along the trail and for grizzly bears not to \nhave been seen in the area. \nf) Hiking is not safe on the trail whenever grizzly bears have been \nseen in the area and berries are ripe along the trail.",
     "timestamp": "2025-08-21T22:58:00",
     "length": 984,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 195,
       "contains_code": false,
@@ -5836,17 +4186,6 @@
     "has_emoji": false,
     "context": {
       "word_count": 5,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20250911-WA0018.jpg (file attached)\nBhai 1 hr zala chalu aahe",
-    "timestamp": "2025-09-11T22:53:00",
-    "length": 65,
-    "has_emoji": true,
-    "context": {
-      "word_count": 9,
       "contains_code": false,
       "is_question": false
     }
@@ -6163,7 +4502,7 @@
     "text": "kulkarnishamal79@gmail.com",
     "timestamp": "2025-10-16T18:26:00",
     "length": 26,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -6281,105 +4620,6 @@
     }
   },
   {
-    "text": "IMG-20251102-WA0002.jpg (file attached)",
-    "timestamp": "2025-11-02T11:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Uni IV Semaphores.pdf (file attached)\nUni IV Semaphores.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 59,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit V Files and Directories.pdf (file attached)\nUnit V Files and Directories.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 81,
-    "has_emoji": true,
-    "context": {
-      "word_count": 12,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit V File Systems.pdf (file attached)\nUnit V File Systems.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 63,
-    "has_emoji": true,
-    "context": {
-      "word_count": 10,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit 4 part 1 Threads.pdf (file attached)\nUnit 4 part 1 Threads.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 67,
-    "has_emoji": true,
-    "context": {
-      "word_count": 12,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Uni IV Locks PPT's.pdf (file attached)\nUni IV Locks PPT's.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 61,
-    "has_emoji": true,
-    "context": {
-      "word_count": 10,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit-II Scheduling-Part II final.pdf (file attached)\nUnit-II Scheduling-Part II final.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 89,
-    "has_emoji": true,
-    "context": {
-      "word_count": 10,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit V Hard Disk.pdf (file attached)\nUnit V Hard Disk.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 57,
-    "has_emoji": true,
-    "context": {
-      "word_count": 10,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Unit-I-OS-final.pdf (file attached)\nUnit-I-OS-final.pdf\nUnit-III_OS.pdf",
-    "timestamp": "2025-11-02T19:29:00",
-    "length": 71,
-    "has_emoji": true,
-    "context": {
-      "word_count": 5,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Dear Students ,\nYour involvement in Vishwakarandak is important for the department to win the karandak. As a part of extra curricular activities if you enroll in any activity your , enrollment and participation will be  considered for *Final evaluation of EDI or for defaulters attendance will be considered* if you have the participation receipt with you. \nAs per the instructions from HoD.\nDr Pravin Futane",
     "timestamp": "2025-11-04T10:41:00",
     "length": 408,
@@ -6457,34 +4697,12 @@
     }
   },
   {
-    "text": "https://www.vidyalankar.org/infinite/assets/docs/study-material/cse-module-3.pdf\nDEAM Questions_FF 195.docx",
-    "timestamp": "2025-11-05T21:10:00",
-    "length": 107,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Tak Gheun ye amul cha",
     "timestamp": "2025-11-09T10:09:00",
     "length": 21,
     "has_emoji": false,
     "context": {
       "word_count": 5,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "STK-20251110-WA0015.webp (file attached)",
-    "timestamp": "2025-11-10T15:29:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -6504,7 +4722,7 @@
     "text": "https://www.youtube.com/live/VA5Pv0tsxSI?si=nm4XhJmWjc0K6tAw",
     "timestamp": "2025-11-10T20:57:00",
     "length": 60,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -6526,240 +4744,9 @@
     "text": "Good Morning Sir/Madam,\nNational Level Mind Sprint 2K25 – 24-Hour Hackathon\nWe proudly invite students and job seekers (B.Tech, Degree, MBA) to participate in the National Level Hackathon organized by PSCMR College, Vijayawada on 11th & 12th December 2025.\nRegistration Fee: ₹250 per person (Team of 3 members)\n🏆 Benefits for Participants\n• Prize Pool worth ₹3,00,000+ (Top 50 Teams)\n• 100+ Virtual Internship Opportunities\n• Food & Accommodation for 2 Days\n• National Level Participation Certificate\n• 24-Hour Innovation Camp + Campfire + games \n Domains:\nAI/ML, IoT, Robotics, Cyber Security, EV Tech, Biomedical, Web Apps, Mobile Applications, Vibe Coding, MBA/BBA Business Idea Presentations & many more.\n Open to All Streams\n🔗 Register Now: https://rzp.io/rzp/8OPi6jD\n More Details: https://brainovision.in/mindsprint\n For Assistance: 8639812316\nRegards,\nBrainovision Solutions India Pvt. Ltd.",
     "timestamp": "2025-11-25T10:12:00",
     "length": 898,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 127,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Deam2.pdf (file attached)\nDeam2.pdf",
-    "timestamp": "2025-11-25T21:57:00",
-    "length": 35,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Deam.pdf (file attached)\nDeam.pdf",
-    "timestamp": "2025-11-25T21:57:00",
-    "length": 33,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "ESE-DEAM-SY IT sem2- AY 23-24.pdf (file attached)\nESE-DEAM-SY IT sem2- AY 23-24.pdf",
-    "timestamp": "2025-11-25T23:16:00",
-    "length": 83,
-    "has_emoji": true,
-    "context": {
-      "word_count": 12,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "ESE-DEAM-SEDA- AY 23-24.pdf (file attached)\nESE-DEAM-SEDA- AY 23-24.pdf",
-    "timestamp": "2025-11-25T23:16:00",
-    "length": 71,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "DEAM ESE- 8th May 2024.pdf (file attached)\nDEAM ESE- 8th May 2024.pdf",
-    "timestamp": "2025-11-25T23:16:00",
-    "length": 69,
-    "has_emoji": true,
-    "context": {
-      "word_count": 12,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "DEAM ESE- Nov 2023.pdf (file attached)\nDEAM ESE- Nov 2023.pdf",
-    "timestamp": "2025-11-25T23:16:00",
-    "length": 61,
-    "has_emoji": true,
-    "context": {
-      "word_count": 10,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0006.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0023.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0007.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0022.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0021.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0008.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0010.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0020.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0018.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0016.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0014.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251126-WA0012.jpg (file attached)",
-    "timestamp": "2025-11-26T15:48:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Campus_Complaint_Management_System_Schema.docx (file attached)\nCampus_Complaint_Management_System_Schema.docx",
-    "timestamp": "2025-11-26T22:50:00",
-    "length": 109,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Campus_Complaint_Management_System.docx (file attached)\nCampus_Complaint_Management_System.docx",
-    "timestamp": "2025-11-26T22:50:00",
-    "length": 95,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "DBMS rf paper.pdf (file attached)\nDBMS rf paper.pdf",
-    "timestamp": "2025-11-26T22:50:00",
-    "length": 51,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
       "contains_code": false,
       "is_question": false
     }
@@ -6768,7 +4755,7 @@
     "text": "Badminton game confirmed on 27 Nov, 3:00 PM - 4:00 PM. Hosted at Court 1, Panchasheel Sports Club. Are you game? RSVP @ http://go.playo.app/PLAYOO/6VMSC\nUnit 5 GRAPH THEORY_kshitijVerma.pdf",
     "timestamp": "2025-11-27T13:42:00",
     "length": 189,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 28,
       "contains_code": false,
@@ -6779,7 +4766,7 @@
     "text": "https://youtube.com/shorts/hlD2oXH8x8o?si=uanrJrKRphh1fyL9",
     "timestamp": "2025-11-29T00:45:00",
     "length": 58,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -6804,17 +4791,6 @@
     "has_emoji": false,
     "context": {
       "word_count": 5,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "IMG-20251229-WA0009.jpg (file attached)",
-    "timestamp": "2025-12-29T16:32:00",
-    "length": 39,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
       "contains_code": false,
       "is_question": false
     }
@@ -6952,28 +4928,6 @@
     }
   },
   {
-    "text": "AUD-20260105-WA0015.opus (file attached)",
-    "timestamp": "2026-01-05T20:52:00",
-    "length": 40,
-    "has_emoji": true,
-    "context": {
-      "word_count": 3,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "Gmail - BHARAT AI-SoC STUDENT CHALLENGE.pdf (file attached)",
-    "timestamp": "2026-01-11T19:50:00",
-    "length": 59,
-    "has_emoji": true,
-    "context": {
-      "word_count": 8,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
     "text": "Mail from iit m",
     "timestamp": "2026-01-11T19:51:00",
     "length": 15,
@@ -6991,28 +4945,6 @@
     "has_emoji": false,
     "context": {
       "word_count": 1,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "UNIT1-_Introduction_ARS.pdf (file attached)\nUNIT1-_Introduction_ARS.pdf",
-    "timestamp": "2026-01-15T17:58:00",
-    "length": 71,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
-      "contains_code": false,
-      "is_question": false
-    }
-  },
-  {
-    "text": "UNIT1-Data-Modelling_ARS1.pdf (file attached)\nUNIT1-Data-Modelling_ARS1.pdf",
-    "timestamp": "2026-01-15T17:58:00",
-    "length": 75,
-    "has_emoji": true,
-    "context": {
-      "word_count": 4,
       "contains_code": false,
       "is_question": false
     }
@@ -7175,7 +5107,7 @@
     "text": "5:50",
     "timestamp": "2026-01-25T22:40:00",
     "length": 4,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -7186,7 +5118,7 @@
     "text": "https://youtube.com/playlist?list=PLd3UqWTnYXOmx_J1774ukG_rvrpyWczm0&si=uWaXEAzOYm58Zlz4",
     "timestamp": "2026-01-26T17:35:00",
     "length": 88,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,
@@ -7274,7 +5206,7 @@
     "text": "https://chatgpt.com/share/6984be6c-25d0-8000-a4a6-2c6f282b6a86",
     "timestamp": "2026-02-05T22:20:00",
     "length": 62,
-    "has_emoji": true,
+    "has_emoji": false,
     "context": {
       "word_count": 1,
       "contains_code": false,

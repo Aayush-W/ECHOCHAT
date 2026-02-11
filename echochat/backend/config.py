@@ -23,6 +23,7 @@ CHAT_UPLOAD_PATH = UPLOADS_DIR / "chat.txt"
 TRAINING_DATA_PATH = DATA_DIR / "training_data.jsonl"
 MEMORY_DATA_PATH = DATA_DIR / "memory_data.json"
 PERSONALITY_PROFILE_PATH = DATA_DIR / "personality_profile.json"
+PERSONA_PACK_PATH = DATA_DIR / "persona_pack.json"
 VECTOR_DB_PATH = DATA_DIR / "vector_db"
 
 # ===== LLM CONFIGURATION =====
@@ -124,8 +125,12 @@ Use these memories to:
 3. Maintain continuity in the conversation
 4. Show that you "remember" important details
 5. Never mention timestamps, similarity scores, or that you are using memory
-6. If nothing is relevant, ignore this section
+6. Memories are ordered chronologically
+7. If nothing is relevant, ignore this section
 """
+
+# ===== PIPELINE VERSION =====
+PIPELINE_VERSION = "2026-02-10-clean-v3"
 
 print(f"Config loaded from: {Path(__file__)}")
 print(f"   Models directory: {MODELS_DIR}")

@@ -2,6 +2,8 @@ import re
 from datetime import datetime
 from typing import List, Dict
 
+from .text_filter import is_blocked
+
 
 def _is_emoji_char(ch: str) -> bool:
     cp = ord(ch)
@@ -30,19 +32,6 @@ def parse_whatsapp_chat(file_path: str) -> List[Dict]:
     # WhatsApp timestamp pattern: DD/MM/YYYY, HH:MM am/pm - Sender: Message
     # Handles non-breaking space (\u202f) used by WhatsApp
     timestamp_pattern = r'^(\d{1,2}/\d{1,2}/\d{4}),\s(\d{1,2}:\d{2}\s(?:am|pm))\s*[-\u2013]\s*(.+?):\s(.*)$'
-    
-    system_keywords = {
-        'Messages you send to this group are now encrypted',
-        'security code changed',
-        'media omitted',
-        'this messages was deleted',
-        'you created this group',
-        'added',
-        'removed',
-        'changed this group\'s icon',
-        'changed the subject',
-        'left',
-    }
     
     messages = []
     
@@ -74,12 +63,8 @@ def parse_whatsapp_chat(file_path: str) -> List[Dict]:
                 print(f"Warning: Could not parse timestamp '{timestamp_str}'")
                 continue
             
-            # Check if system message
-            if any(keyword.lower() in message.lower() for keyword in system_keywords):
-                continue
-            
-            # Skip empty messages
-            if not message:
+            # Skip empty or blocked messages
+            if not message or is_blocked(message):
                 continue
             
             # Count emojis (emoji codepoint check)
@@ -96,6 +81,8 @@ def parse_whatsapp_chat(file_path: str) -> List[Dict]:
         else:
             # Continuation of previous message (multi-line)
             if not line.strip():
+                continue
+            if is_blocked(line):
                 continue
             if messages:
                 messages[-1]['message'] += '\n' + line

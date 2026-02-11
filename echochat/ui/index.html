@@ -1,69 +1,141 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EchoChat</title>
-    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/style.css" />`n    <script>`n      window.ECHOCHAT_API_BASE = window.location.origin;`n    </script>
   </head>
   <body>
-    <div class="app">
-      <header class="header">
-        <div>
-          <h1>EchoChat</h1>
-          <p>Upload a chat export and get fast, style-matched replies. No training required.</p>
+    <div class="wa-shell">
+      <aside class="wa-sidebar">
+        <div class="wa-sidebar-top">
+          <div class="wa-title">Chats</div>
+          <div class="wa-actions">
+            <button class="icon-btn" type="button" aria-label="New chat">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button class="icon-btn" type="button" aria-label="Menu">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5" r="1.6" fill="currentColor" />
+                <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+                <circle cx="12" cy="19" r="1.6" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="badge">Local • Private • Fast</div>
-      </header>
 
-      <section class="panel upload">
-        <div class="panel-head">
-          <h2>1. Upload chat</h2>
-          <p>Works with WhatsApp .txt exports. Processing builds memories for fast RAG.</p>
+        <div class="wa-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M16.5 16.5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <input id="chat-search" type="text" placeholder="Search or start a new chat" autocomplete="off" />
         </div>
-        <form id="upload-form" class="upload-form">
-          <label class="file">
-            <input id="chat-file" type="file" accept=".txt" />
-            <span>Choose chat.txt</span>
-          </label>
-          <button id="upload-btn" type="submit">Process chat</button>
+
+        <div class="wa-filters">
+          <button class="chip active" type="button">All</button>
+          <button class="chip" type="button">Unread</button>
+          <button class="chip" type="button">Favourites</button>
+          <button class="chip" type="button">Groups</button>
+        </div>
+
+        <div class="wa-card upload-card">
+          <div class="wa-card-head">
+            <div>
+              <h2>Upload chat</h2>
+              <p>WhatsApp .txt export. Builds persona + memories.</p>
+            </div>
+            <div class="wa-pill">Local</div>
+          </div>
+          <form id="upload-form" class="upload-form">
+            <label class="file">
+              <input id="chat-file" type="file" accept=".txt" />
+              <span>Choose chat.txt</span>
+            </label>
+            <button id="upload-btn" type="submit">Process</button>
+          </form>
           <div id="upload-status" class="status">Waiting for upload</div>
-        </form>
-        <div class="upload-meta">
-          <div>
-            <span class="label">Session</span>
-            <span id="session-id">—</span>
-          </div>
-          <div>
-            <span class="label">Messages</span>
-            <span id="message-count">—</span>
+          <div class="upload-meta">
+            <div>
+              <span class="label">Session</span>
+              <span id="session-id">—</span>
+            </div>
+            <div>
+              <span class="label">Messages</span>
+              <span id="message-count">—</span>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="panel chat-panel">
-        <div class="chat-head">
-          <div class="selector">
-            <span class="label">Echo person</span>
-            <select id="person-select" disabled></select>
-          </div>
-          <label class="toggle">
-            <input id="memories" type="checkbox" checked />
-            <span>Use memories</span>
-          </label>
+        <div class="wa-section">
+          <div class="wa-section-title">Echo person</div>
+          <select id="person-select" disabled></select>
         </div>
 
-        <main id="chat" class="chat"></main>
+        <div id="chat-list" class="wa-chat-list"></div>
+      </aside>
 
-        <form id="composer" class="composer">
+      <section class="wa-main">
+        <header class="wa-chat-header">
+          <div class="chat-info">
+            <div class="avatar" id="chat-avatar">EC</div>
+            <div>
+              <div class="chat-name" id="chat-name">EchoChat</div>
+              <div class="chat-status" id="chat-subtitle">Upload a chat to begin</div>
+            </div>
+          </div>
+          <div class="chat-actions">
+            <label class="mem-toggle">
+              <input id="memories" type="checkbox" checked />
+              <span>Use memories</span>
+            </label>
+            <button class="icon-btn" type="button" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none" />
+                <path d="M16.5 16.5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <button class="icon-btn" type="button" aria-label="More">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="5" r="1.6" fill="currentColor" />
+                <circle cx="12" cy="12" r="1.6" fill="currentColor" />
+                <circle cx="12" cy="19" r="1.6" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+        </header>
+
+        <main id="chat" class="wa-chat-window"></main>
+
+        <form id="composer" class="wa-composer">
+          <button class="icon-btn ghost" type="button" aria-label="Attach">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 12.5l7.5-7.5a3.5 3.5 0 0 1 5 5l-8.5 8.5a5 5 0 0 1-7-7l8.2-8.2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <button class="icon-btn ghost" type="button" aria-label="Emoji">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none" />
+              <circle cx="9" cy="10" r="1" fill="currentColor" />
+              <circle cx="15" cy="10" r="1" fill="currentColor" />
+              <path d="M8 15c1.1 1 2.5 1.5 4 1.5s2.9-.5 4-1.5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" />
+            </svg>
+          </button>
           <input
             id="message"
             type="text"
-            placeholder="Type a message..."
+            placeholder="Type a message"
             autocomplete="off"
             disabled
           />
-          <button type="submit" disabled>Send</button>
+          <button class="send-btn" type="submit" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 11.5l17-8-5 18-3-7-9-3z" fill="currentColor" />
+            </svg>
+          </button>
         </form>
       </section>
     </div>
@@ -71,3 +143,4 @@
     <script src="/static/app.js"></script>
   </body>
 </html>
+
