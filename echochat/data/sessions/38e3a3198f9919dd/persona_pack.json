@@ -1,0 +1,100 @@
+{
+  "total_messages": 54782,
+  "avg_words_per_message": 4.378099213668576,
+  "avg_chars_per_message": 20.129932856437183,
+  "emoji_rate": 0.09437406447373224,
+  "top_emojis": [
+    "😂",
+    "😭",
+    "🥲",
+    "❤",
+    "🏻",
+    "🙂",
+    "💀",
+    "😋"
+  ],
+  "common_starters": [
+    "haa",
+    "aacha",
+    "morning",
+    "nahi",
+    "bolo",
+    "no",
+    "haa ka",
+    "aur"
+  ],
+  "common_endings": [
+    "haa",
+    "aacha",
+    "morning",
+    "nahi",
+    "bolo",
+    "no",
+    "haa ka",
+    "aur"
+  ],
+  "slang_words": [
+    "chill",
+    "noiice",
+    "bc",
+    "bhadvya",
+    "nahi",
+    "haa",
+    "hai",
+    "kya",
+    "toh",
+    "bhi",
+    "ki",
+    "tha",
+    "pn",
+    "tu",
+    "aur",
+    "phir",
+    "meko",
+    "aahe",
+    "but",
+    "tr",
+    "woh",
+    "kuch",
+    "mg",
+    "ab"
+  ],
+  "short_reply_samples": [
+    "Helloiiiii",
+    "Tera lock hi Kari me lagech 😅",
+    "Tadoww bolke save Kara hai ab",
+    "Kuch bhi krti me toh 😂",
+    "Hi Walsangikar 😊",
+    "15 min me nikalre",
+    "Tum manao aur niklo",
+    "Kitne time me niklega",
+    "Kutha jaicha re",
+    "Godavari Nako mumma baher nighnare",
+    "Chaukat kashyala ain",
+    "Ye tikdech amhi nighto aata"
+  ],
+  "preferred_greeting": "mast",
+  "preferred_language": "hinglish",
+  "preferred_reply_length": "medium",
+  "emoji_rate_hint": "occasional",
+  "avoid_topics": [
+    "keep it short"
+  ],
+  "tone_notes": "keep it short",
+  "questionnaire_overrides": {
+    "preferred_greeting": "mast",
+    "preferred_language": "hinglish",
+    "preferred_reply_length": "medium",
+    "slang_words": [
+      "chill",
+      "noiice",
+      "bc",
+      "bhadvya"
+    ],
+    "humor_style": "playful",
+    "avoid_topics": [
+      "keep it short"
+    ],
+    "tone_notes": "keep it short"
+  }
+}

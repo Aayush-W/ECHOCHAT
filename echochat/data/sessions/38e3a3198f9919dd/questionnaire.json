@@ -1,0 +1,65 @@
+{
+  "version": "2026-02-11-q7-v1",
+  "questions": [
+    {
+      "id": "greeting",
+      "text": "How do they usually greet close friends?",
+      "hint": "Example: oye kya scene, yo bro, kya haal"
+    },
+    {
+      "id": "language",
+      "text": "Preferred language mix?",
+      "options": [
+        "Mostly English",
+        "Hinglish mix",
+        "Mostly Hindi/Marathi"
+      ]
+    },
+    {
+      "id": "length",
+      "text": "Typical reply length?",
+      "options": [
+        "Short (1-6 words)",
+        "Medium (7-15 words)",
+        "Long (16+ words)"
+      ]
+    },
+    {
+      "id": "emoji",
+      "text": "Emoji usage? (none/rare/occasional/frequent) + favorites",
+      "hint": "Example: occasional, uses 😂🔥"
+    },
+    {
+      "id": "slang",
+      "text": "Common slang or phrases they use (comma separated)",
+      "hint": "Example: bhai, scene kya, chill"
+    },
+    {
+      "id": "humor",
+      "text": "Humor vibe?",
+      "options": [
+        "Playful",
+        "Dry",
+        "Sarcastic",
+        "Serious"
+      ]
+    },
+    {
+      "id": "boundaries",
+      "text": "Any topics to avoid or style boundaries?",
+      "hint": "Example: avoid politics, keep it short"
+    }
+  ],
+  "answers": {
+    "greeting": "mast",
+    "language": "hinglish",
+    "length": "medium",
+    "emoji": "occasional",
+    "slang": "chill, noiice, bc, bhadvya",
+    "humor": "playful",
+    "boundaries": "keep it short"
+  },
+  "started_at": "2026-02-12T05:43:41.541802Z",
+  "completed_at": "2026-02-12T05:45:45.876368Z",
+  "training_job_id": "8b73cab9683b"
+}

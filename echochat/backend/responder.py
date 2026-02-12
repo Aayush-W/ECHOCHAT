@@ -241,7 +241,7 @@ class Responder:
                             response_text = ""
                 else:
                     if not getattr(self, "_ollama_available", True):
-                        # Ollama not reachable - produce a safe fallback using examples/memories
+                        print(f"Ollama not available, using fallback response")
                         if example_results and example_results[0].get("output"):
                             response_text = example_results[0].get("output", "")
                         elif memories_used:
@@ -251,15 +251,35 @@ class Responder:
                             response_text = "haan bolo" if mode in ("hinglish", "hindi") else "yeah?"
                     else:
                         response_text = self._query_ollama(prompt)
+                
+                if not response_text or not response_text.strip():
+                    print(f"WARNING: Empty response from LLM on attempt {attempt}")
+                    if attempt == 0:
+                        attempt += 1
+                        continue
+                    else:
+                        raise Exception("LLM generated empty response after retries")
             except Exception as e:
-                print(f"Error generating response: {e}")
-                return {
-                    'response': f"Sorry, I encountered an error: {str(e)}",
-                    'reasoning': None,
-                    'memories_used': [],
-                    'model': self.model_name,
-                    'success': False,
-                }
+                print(f"ERROR generating response (attempt {attempt}): {e}")
+                if attempt == 0:
+                    attempt += 1
+                    print(f"Attempting fallback response...")
+                    if example_results and example_results[0].get("output"):
+                        response_text = example_results[0].get("output", "")
+                    elif memories_used:
+                        response_text = memories_used[0]
+                    else:
+                        mode = self._detect_language_mode(user_message)
+                        response_text = "haan bolo" if mode in ("hinglish", "hindi") else "yeah?"
+                    continue
+                else:
+                    return {
+                        'response': f"Sorry, encountered error: {str(e)}",
+                        'reasoning': None,
+                        'memories_used': [],
+                        'model': self.model_name,
+                        'success': False,
+                    }
 
             # Apply safety filters + refine
             response_text = self._apply_safety_filters(response_text)
@@ -884,16 +904,31 @@ class Responder:
             response.raise_for_status()
             
             result = response.json()
-            return result.get('response', '').strip()
+            generated = result.get('response', '').strip()
+            
+            if not generated:
+                print(f"WARNING: Empty response from {self.model_name}")
+                print(f"Raw result: {result}")
+                raise Exception(f"Model {self.model_name} returned empty response")
+            
+            return generated
         
         except requests.exceptions.Timeout:
-            raise Exception("LLM request timed out (>30s)")
+            error_msg = f"LLM request timed out (>30s) to {self.api_endpoint}"
+            print(f"ERROR: {error_msg}")
+            raise Exception(error_msg)
         except requests.exceptions.ConnectionError:
-            raise Exception("Cannot connect to Ollama API")
+            error_msg = f"Cannot connect to Ollama API at {self.api_endpoint}. Ensure Ollama is running: ollama serve"
+            print(f"ERROR: {error_msg}")
+            raise Exception(error_msg)
         except requests.exceptions.HTTPError as e:
-            raise Exception(f"Ollama error: {e.response.text}")
-        except json.JSONDecodeError:
-            raise Exception("Invalid response from Ollama")
+            error_msg = f"Ollama HTTP error: {e.response.text}"
+            print(f"ERROR: {error_msg}")
+            raise Exception(error_msg)
+        except json.JSONDecodeError as e:
+            error_msg = f"Invalid JSON response from Ollama: {e}"
+            print(f"ERROR: {error_msg}")
+            raise Exception(error_msg)
     
     def _apply_safety_filters(self, response: str) -> str:
         """Apply safety and ethics rules."""

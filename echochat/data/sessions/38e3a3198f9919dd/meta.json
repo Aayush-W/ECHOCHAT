@@ -1,0 +1,13 @@
+{
+  "echo_person": "Tava Pulav",
+  "message_count": 93709,
+  "echo_message_count": 55045,
+  "training_pairs": 23772,
+  "memory_entries": 55045,
+  "persona_pack": "C:\\Users\\Aayush Walsangikar\\OneDrive\\Desktop\\ECHOCHAT\\echochat\\data\\sessions\\38e3a3198f9919dd\\persona_pack.json",
+  "pipeline_version": "2026-02-10-clean-v3",
+  "updated_at": "2026-02-12T05:43:30.041834Z",
+  "questionnaire_training_job_id": "8b73cab9683b",
+  "questionnaire_completed": true,
+  "questionnaire_completed_at": "2026-02-12T05:45:45.876368Z"
+}

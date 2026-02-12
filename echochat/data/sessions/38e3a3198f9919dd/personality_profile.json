@@ -1,0 +1,182 @@
+{
+  "timestamp": "C:\\Users\\Aayush Walsangikar\\OneDrive\\Desktop\\ECHOCHAT",
+  "analysis_metadata": {
+    "valid_messages": 55045,
+    "invalid_messages": 0
+  },
+  "personality_profile": {
+    "total_messages": 55045,
+    "language_mixing": {
+      "hinglish_percentage": 1.8493959487691887,
+      "english_only_percentage": 98.15060405123081,
+      "language_mixing_score": 1.8493959487691887,
+      "detected_hinglish_words": [
+        [
+          "nahi",
+          4409
+        ],
+        [
+          "kya",
+          2685
+        ],
+        [
+          "na",
+          2019
+        ],
+        [
+          "aahe",
+          1115
+        ],
+        [
+          "hote",
+          426
+        ],
+        [
+          "bhai",
+          131
+        ],
+        [
+          "acha",
+          125
+        ],
+        [
+          "ok",
+          111
+        ],
+        [
+          "dekho",
+          99
+        ],
+        [
+          "karenge",
+          90
+        ]
+      ],
+      "confidence_score": 0.3981358686327348,
+      "quality_flag": "LOW"
+    },
+    "emoji_patterns": {
+      "emoji_usage_percentage": 10.237078753746934,
+      "top_emojis": [
+        "😂",
+        "😭",
+        "❤",
+        "🥲",
+        "🏻",
+        "🙂",
+        "💀",
+        "😋",
+        "🥹",
+        "😁"
+      ],
+      "emoji_frequency": {
+        "😂": 2452,
+        "😭": 1836,
+        "❤": 854,
+        "🥲": 853,
+        "🏻": 703,
+        "🙂": 641,
+        "💀": 419,
+        "😋": 351,
+        "🥹": 323,
+        "😁": 304
+      },
+      "emoji_positions": {
+        "start": 2057,
+        "middle": 2739,
+        "end": 5068
+      },
+      "avg_emojis_per_message": 2.107187222715173,
+      "emoji_usage_intensity": "occasional"
+    },
+    "sentence_structure": {
+      "avg_message_length": 20.56043237351258,
+      "min_message_length": 1,
+      "max_message_length": 20946,
+      "median_message_length": 14,
+      "avg_words_per_message": 4.0928331365246615,
+      "short_messages_percentage": 62.95576346625488,
+      "medium_messages_percentage": 35.98691979289672,
+      "long_messages_percentage": 1.0573167408483968,
+      "punctuation_style": {
+        "?": 3469,
+        ".": 2010,
+        ",": 871,
+        "-": 562,
+        ":": 469
+      },
+      "exclamation_percentage": 0.39785629939140704,
+      "question_percentage": 5.5045871559633035,
+      "multiline_percentage": 5.491870287946226,
+      "message_length_category": "brief"
+    },
+    "humor_style": {
+      "sarcasm_indicators_percentage": 0.7502952130075392,
+      "self_deprecation_percentage": 0.02180034517213189,
+      "casual_humor_percentage": 3.3645199382323554,
+      "detected_humor_patterns": {
+        "sarcasm": 413,
+        "self_deprecating": 12,
+        "casual": 1852
+      },
+      "humor_style": "minimal_humor",
+      "humor_confidence": 0.033645199382323555
+    },
+    "emotional_patterns": {
+      "question_percentage": 5.5045871559633035,
+      "exclamation_percentage": 0.39785629939140704,
+      "emotional_engagement": "moderate",
+      "sentiment_tendency": "neutral",
+      "positive_percentage": 3.9131619583976747,
+      "negative_percentage": 0.9791988373149242,
+      "sentiment_confidence": 0.029339631210827503
+    },
+    "topic_preferences": {
+      "top_topics": [
+        "nahi",
+        "haa",
+        "hai",
+        "kya",
+        "toh",
+        "bhi",
+        "tha",
+        "aur",
+        "phir",
+        "meko"
+      ],
+      "topic_keywords": {
+        "nahi": 4663,
+        "haa": 3563,
+        "hai": 3498,
+        "kya": 2797,
+        "toh": 2384,
+        "bhi": 1671,
+        "tha": 1328,
+        "aur": 1272,
+        "phir": 1264,
+        "meko": 1248,
+        "aahe": 1156
+      },
+      "topic_count": 11,
+      "quality_flag": "HIGH"
+    },
+    "response_characteristics": {
+      "response_style": "brief_casual",
+      "engagement_level": "low",
+      "formality": "formal",
+      "avg_message_length": 20.56043237351258,
+      "message_length_category": "brief",
+      "typical_response_length": "short_4_6_words"
+    },
+    "quality_metrics": {
+      "data_quality": "EXCELLENT",
+      "total_messages_analyzed": 55045,
+      "spam_messages_percentage": 6.614588064311018,
+      "quality_flag": "OK",
+      "reliability": "MEDIUM"
+    }
+  },
+  "humor_style": {
+    "humor_style": "playful"
+  }
+}
