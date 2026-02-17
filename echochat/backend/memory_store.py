@@ -2,7 +2,7 @@ import json
 import re
 import textwrap
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional, Set
 
 import numpy as np
 
@@ -21,36 +21,37 @@ try:
 except Exception:
     FaissVectorStore = None
 
-from .text_filter import is_blocked, is_file_related, is_chat_safe
+from .text_filter import is_blocked, is_chat_safe, is_file_related
 
 
 class MemoryStore:
     """
-    Vector-based semantic memory system.
+    Vector-based semantic memory with intent-aware hybrid reranking.
 
-    Stores and retrieves past messages using semantic similarity.
+    Retrieval combines:
+    - semantic similarity (sentence-transformer embeddings)
+    - lexical overlap (keyword coverage)
 
-    Capabilities:
-    - Load past messages
-    - Generate embeddings for each message
-    - Semantic search (find similar messages)
-    - Context retrieval for prompt injection
-    - Memory decay/aging (optional)
+    This reduces false positives from pure vector-nearest matches while keeping
+    recall for context-heavy prompts.
     """
 
     _shared_model = None
     _shared_model_name = None
+    _LEXICAL_STOPWORDS = {
+        "a", "an", "the", "is", "am", "are", "was", "were", "to", "of", "for", "in",
+        "on", "at", "and", "or", "it", "this", "that", "i", "me", "my", "you", "your",
+        "we", "our", "they", "their", "do", "does", "did", "have", "has", "had", "be",
+        "kya", "kaise", "kaisa", "kaisi", "hai", "ho", "hu", "na", "haan", "nahi",
+        "aur", "tu", "tum", "main", "mai", "bhai", "bro", "yaar", "kasa", "kay",
+        "ki", "ka", "ke", "ch", "cha",
+    }
 
     def __init__(
         self,
         model_name: str = "all-MiniLM-L6-v2",
         memory_data_path: str = "data/memory_data.json",
     ):
-        """
-        Args:
-            model_name: HuggingFace embedding model
-            memory_data_path: Path to memory data JSON
-        """
         self.model_name = model_name
         self.memory_data_path = memory_data_path
         self.messages: List[Dict] = []
@@ -62,6 +63,8 @@ class MemoryStore:
         self._text_to_indices: Dict[str, List[int]] = {}
         self._normalized_texts: List[str] = []
         self._text_ts_to_index: Dict[tuple, int] = {}
+        self._vector_store = None
+        self._vector_signature: Optional[tuple] = None
 
         if self.embeddings_available:
             try:
@@ -81,64 +84,63 @@ class MemoryStore:
         else:
             print("sentence-transformers not installed. Embeddings disabled.")
 
+        self._init_vector_store()
         self.load_memories()
-        # initialize persistent vector store if available
+
+    def _init_vector_store(self) -> None:
         try:
-            self._vector_store = None
-            # prefer Weaviate when available (managed vector DB)
+            # Prefer managed DB when available, fallback to local FAISS.
             if WeaviateVectorStore is not None:
                 try:
-                    self._vector_store = WeaviateVectorStore(index_name=Path(self.memory_data_path).stem)
+                    self._vector_store = WeaviateVectorStore(
+                        index_name=Path(self.memory_data_path).stem
+                    )
+                    return
                 except Exception:
                     self._vector_store = None
-            elif FaissVectorStore is not None:
-                emb_index_path = Path(self.memory_data_path).with_suffix('.faiss')
+
+            if FaissVectorStore is not None:
+                emb_index_path = Path(self.memory_data_path).with_suffix(".faiss")
                 self._vector_store = FaissVectorStore(str(emb_index_path))
-                # Try loading existing index (Faiss has a load method)
                 try:
-                    if not self._vector_store.load():
-                        pass
+                    self._vector_store.load()
                 except Exception:
                     pass
         except Exception:
             self._vector_store = None
 
     def load_memories(self) -> None:
-        """Load memory data from JSON file."""
         try:
-            with open(self.memory_data_path, 'r', encoding='utf-8') as f:
+            with open(self.memory_data_path, "r", encoding="utf-8") as f:
                 self.messages = json.load(f)
             print(f"Loaded {len(self.messages)} memories")
             self._build_indices()
 
-            # Attempt to load cached embeddings from disk for this memory file
-            try:
-                emb_path = Path(self.memory_data_path).with_suffix('.emb.npy')
-                meta_path = Path(self.memory_data_path).with_suffix('.emb.meta.json')
-                if emb_path.exists() and self.embeddings_available and self.model:
-                    try:
-                        arr = np.load(str(emb_path))
+            emb_path = Path(self.memory_data_path).with_suffix(".emb.npy")
+            meta_path = Path(self.memory_data_path).with_suffix(".emb.meta.json")
+
+            if emb_path.exists() and self.embeddings_available and self.model:
+                try:
+                    arr = np.load(str(emb_path))
+                    if getattr(arr, "ndim", 0) >= 2 and len(arr) == len(self.messages):
                         self.embeddings = arr
-                        # verify dimension
-                        if getattr(self.embeddings, 'ndim', 0) == 1:
-                            self.embeddings = None
-                        else:
-                            print(f"Loaded embeddings cache: {emb_path}")
-                    except Exception:
+                        print(f"Loaded embeddings cache: {emb_path}")
+                    else:
                         self.embeddings = None
-                # If not loaded, generate and persist
-                if self.embeddings_available and self.model and self.embeddings is None:
-                    self._generate_embeddings()
-                    try:
-                        if self.embeddings is not None:
-                            np.save(str(emb_path), self.embeddings)
-                            meta = {"model_name": self.model_name}
-                            with open(meta_path, 'w', encoding='utf-8') as mf:
-                                json.dump(meta, mf)
-                    except Exception:
-                        pass
-            except Exception as e:
-                print(f"Embedding cache handling error: {e}")
+                except Exception:
+                    self.embeddings = None
+
+            if self.embeddings_available and self.model and self.embeddings is None:
+                self._generate_embeddings()
+                try:
+                    if self.embeddings is not None:
+                        np.save(str(emb_path), self.embeddings)
+                        with open(meta_path, "w", encoding="utf-8") as mf:
+                            json.dump({"model_name": self.model_name}, mf)
+                except Exception:
+                    pass
+
+            self._sync_vector_store()
         except FileNotFoundError:
             print(f"Memory file not found: {self.memory_data_path}")
             self.messages = []
@@ -151,8 +153,127 @@ class MemoryStore:
     def _normalize_text(self, text: str) -> str:
         return " ".join((text or "").strip().lower().split())
 
+    def _tokenize(self, text: str) -> List[str]:
+        return re.findall(r"\b\w+\b", (text or "").lower())
+
+    def _query_terms(self, query: str) -> Set[str]:
+        return self._content_terms(query)
+
+    def _content_terms(self, text: str) -> Set[str]:
+        tokens = self._tokenize(text)
+        return {
+            tok for tok in tokens
+            if tok and len(tok) > 1 and tok not in self._LEXICAL_STOPWORDS
+        }
+
+    def _lexical_score(self, query_terms: Set[str], text: str, query_lower: str) -> float:
+        if not query_terms:
+            return 0.0
+
+        text_tokens = set(self._tokenize(text))
+        if not text_tokens:
+            return 0.0
+
+        intersection = query_terms & text_tokens
+        if not intersection:
+            return 0.0
+
+        coverage = len(intersection) / max(len(query_terms), 1)
+        jaccard = len(intersection) / max(len(query_terms | text_tokens), 1)
+        score = (0.75 * coverage) + (0.25 * jaccard)
+
+        if query_lower and query_lower in (text or "").lower():
+            score = max(score, 0.95)
+
+        return float(score)
+
+    def _passes_intent(self, text: str, intent: Optional[str]) -> bool:
+        if not intent:
+            return True
+        if intent == "chat":
+            return is_chat_safe(text)
+        if intent == "file":
+            return not is_blocked(text)
+        return not is_blocked(text)
+
+    def _passes_relevance_gate(
+        self,
+        semantic_score: float,
+        lexical_score: float,
+        similarity_threshold: float,
+        intent: Optional[str],
+        query_term_count: int,
+    ) -> bool:
+        if intent == "info":
+            min_sem = max(similarity_threshold, 0.36)
+            min_lex = 0.06 if query_term_count >= 2 else 0.0
+        elif intent == "file":
+            min_sem = max(similarity_threshold, 0.34)
+            min_lex = 0.04 if query_term_count >= 2 else 0.0
+        else:
+            min_sem = max(similarity_threshold, 0.30)
+            min_lex = 0.0
+
+        if semantic_score < min_sem:
+            return False
+        if lexical_score < min_lex:
+            return False
+        return True
+
+    def _hybrid_score(self, semantic_score: float, lexical_score: float) -> float:
+        return float((0.8 * semantic_score) + (0.2 * lexical_score))
+
+    def _lexical_only_search(
+        self,
+        query: str,
+        top_k: int,
+        max_length: Optional[int],
+        intent: Optional[str],
+    ) -> List[Dict]:
+        query_lower = query.strip().lower()
+        query_terms = self._query_terms(query)
+        if not query_terms:
+            return []
+
+        lexical_hits: List[Dict] = []
+        for idx, msg in enumerate(self.messages):
+            text = msg.get("text", "")
+            if not text:
+                continue
+            if not self._passes_intent(text, intent):
+                continue
+            msg_length = msg.get("length", len(text))
+            if max_length is not None and msg_length > max_length:
+                continue
+
+            lexical_score = self._lexical_score(query_terms, text, query_lower)
+            if intent == "info":
+                if lexical_score < 0.18:
+                    continue
+            elif lexical_score < 0.12:
+                continue
+
+            lexical_hits.append(
+                {
+                    "message": msg,
+                    "similarity": lexical_score,
+                    "lexical_score": lexical_score,
+                    "hybrid_score": lexical_score,
+                    "index": idx,
+                }
+            )
+
+        lexical_hits.sort(
+            key=lambda x: (x.get("hybrid_score", 0.0), x.get("similarity", 0.0)),
+            reverse=True,
+        )
+        return lexical_hits[:top_k]
+
     def _build_indices(self) -> None:
-        self._normalized_texts = [self._normalize_text(msg.get("text", "")) for msg in self.messages]
+        self._normalized_texts = [
+            self._normalize_text(msg.get("text", ""))
+            for msg in self.messages
+        ]
         self._sorted_indices = sorted(
             range(len(self.messages)),
             key=lambda i: self.messages[i].get("timestamp", ""),
@@ -185,7 +306,6 @@ class MemoryStore:
         return indices[0]
 
     def _generate_embeddings(self) -> None:
-        """Generate embeddings for all messages."""
         if not self.embeddings_available or not self.model:
             print("Embeddings not available")
             return
@@ -194,30 +314,46 @@ class MemoryStore:
             self.embeddings = None
             return
 
-        texts = [msg.get('text', '') for msg in self.messages]
+        texts = [msg.get("text", "") for msg in self.messages]
         print(f"Generating embeddings for {len(texts)} messages...")
-
         try:
             self.embeddings = self.model.encode(texts, show_progress_bar=True)
             print(f"Generated {len(self.embeddings)} embeddings")
-            # Persist embeddings to disk alongside memory file
-            try:
-                emb_path = Path(self.memory_data_path).with_suffix('.emb.npy')
-                np.save(str(emb_path), self.embeddings)
-                # Push embeddings to vector store if available
-                try:
-                    vs = getattr(self, '_vector_store', None)
-                    if vs is not None:
-                        if hasattr(vs, 'upsert_embeddings'):
-                            vs.upsert_embeddings(self.embeddings, self.messages)
-                        elif hasattr(vs, 'build_index'):
-                            vs.build_index(self.embeddings, self.messages)
-                except Exception:
-                    pass
-            except Exception:
-                pass
+            self._sync_vector_store()
         except Exception as e:
             print(f"Error generating embeddings: {e}")
+
+    def _sync_vector_store(self) -> None:
+        vs = getattr(self, "_vector_store", None)
+        if vs is None or self.embeddings is None or not self.messages:
+            return
+
+        signature = (
+            len(self.messages),
+            self.model_name,
+            self.messages[0].get("timestamp", "") if self.messages else "",
+            self.messages[-1].get("timestamp", "") if self.messages else "",
+        )
+        if signature == self._vector_signature:
+            return
+
+        try:
+            if hasattr(vs, "build_index"):
+                # Faiss path
+                needs_rebuild = True
+                try:
+                    meta_len = len(getattr(vs, "metadatas", []) or [])
+                    needs_rebuild = meta_len != len(self.messages)
+                except Exception:
+                    needs_rebuild = True
+                if needs_rebuild:
+                    vs.build_index(self.embeddings.astype("float32"), self.messages)
+            elif hasattr(vs, "upsert_embeddings"):
+                # Weaviate path
+                vs.upsert_embeddings(self.embeddings.astype("float32"), self.messages)
+            self._vector_signature = signature
+        except Exception:
+            pass
 
     def search(
         self,
@@ -226,97 +362,118 @@ class MemoryStore:
         similarity_threshold: float = 0.3,
         max_length: Optional[int] = None,
         intent: Optional[str] = None,
+        allow_recent_fallback: bool = False,
     ) -> List[Dict]:
         """
-        Semantic search for similar messages.
-
-        Args:
-            query: User input or context
-            top_k: Number of top results
-            similarity_threshold: Minimum cosine similarity
-
-        Returns:
-            List of most relevant memories
+        Hybrid semantic + lexical search.
         """
-        if not self.embeddings_available or not self.model or self.embeddings is None:
-            print("Embeddings unavailable. Returning recent messages.")
-            return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+        if not query or not query.strip():
+            return []
 
-        def _passes_intent(text: str) -> bool:
-            if not intent:
-                return True
-            if intent == "chat":
-                return is_chat_safe(text)
-            if intent == "file":
-                return not is_blocked(text)
-            return not is_blocked(text)
+        if not self.embeddings_available or not self.model or self.embeddings is None:
+            hits = self._lexical_only_search(
+                query=query,
+                top_k=top_k,
+                max_length=max_length,
+                intent=intent,
+            )
+            if hits:
+                return hits
+            if allow_recent_fallback:
+                return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+            return []
 
         try:
-            # Prefer vector store search (Weaviate preferred, Faiss fallback)
-            if self._vector_store:
-                qe = self.model.encode([query])[0]
-                try:
-                    results = self._vector_store.search(qe, top_k=top_k)
-                except Exception:
-                    results = []
-
-                out = []
-                for r in results:
-                    msg = r.get('metadata')
-                    score = r.get('score', 0.0)
-                    text = msg.get('text', '') if isinstance(msg, dict) else ''
-                    if not _passes_intent(text):
-                        continue
-                    msg_length = msg.get('length', len(text)) if isinstance(msg, dict) else len(text)
-                    if max_length is not None and msg_length > max_length:
-                        continue
-                    if score is not None and score < similarity_threshold:
-                        continue
-                    out.append({
-                        'message': msg,
-                        'similarity': float(score),
-                        'index': self._index_for_message(msg),
-                    })
-                if out:
-                    return out
-
-            # Fallback: numpy-based cosine similarity
             query_embedding = self.model.encode([query])[0]
+            query_lower = query.strip().lower()
+            query_terms = self._query_terms(query)
+            query_term_count = len(query_terms)
+
+            # Optional vector DB shortlist.
+            vector_scores: Dict[int, float] = {}
+            if self._vector_store is not None:
+                try:
+                    short_k = min(max(top_k * 8, 32), len(self.messages))
+                    vector_hits = self._vector_store.search(query_embedding, top_k=short_k)
+                    for hit in vector_hits:
+                        msg = hit.get("metadata")
+                        if not isinstance(msg, dict):
+                            continue
+                        idx = self._index_for_message(msg)
+                        if idx is None:
+                            continue
+                        score = float(hit.get("score", 0.0) or 0.0)
+                        prev = vector_scores.get(idx)
+                        if prev is None or score > prev:
+                            vector_scores[idx] = score
+                except Exception:
+                    vector_scores = {}
 
             denom = np.linalg.norm(self.embeddings, axis=1) * np.linalg.norm(query_embedding)
             denom = np.where(denom == 0, 1e-12, denom)
             similarities = np.dot(self.embeddings, query_embedding) / denom
 
-            sorted_indices = np.argsort(similarities)[::-1]
+            shortlist_size = min(max(top_k * 12, 64), len(self.messages))
+            semantic_shortlist = np.argsort(similarities)[::-1][:shortlist_size]
+            candidate_indices = set(int(i) for i in semantic_shortlist)
+            candidate_indices.update(vector_scores.keys())
 
-            results = []
-            for idx in sorted_indices:
-                if len(results) >= top_k:
-                    break
-                if similarities[idx] < similarity_threshold:
-                    continue
-
+            ranked: List[Dict] = []
+            for idx in candidate_indices:
                 msg = self.messages[idx]
-                text = msg.get('text', '')
-                if not _passes_intent(text):
+                text = msg.get("text", "")
+                if not text:
                     continue
-                msg_length = msg.get('length', len(text))
+                if not self._passes_intent(text, intent):
+                    continue
+
+                msg_length = msg.get("length", len(text))
                 if max_length is not None and msg_length > max_length:
                     continue
 
-                results.append({
-                    'message': msg,
-                    'similarity': float(similarities[idx]),
-                    'index': idx,
-                })
+                semantic_score = float(similarities[idx])
+                if idx in vector_scores:
+                    semantic_score = max(semantic_score, vector_scores[idx])
 
-            if results:
-                return results
-            return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+                lexical_score = self._lexical_score(query_terms, text, query_lower)
+                if not self._passes_relevance_gate(
+                    semantic_score=semantic_score,
+                    lexical_score=lexical_score,
+                    similarity_threshold=similarity_threshold,
+                    intent=intent,
+                    query_term_count=query_term_count,
+                ):
+                    continue
 
+                ranked.append(
+                    {
+                        "message": msg,
+                        "similarity": semantic_score,
+                        "lexical_score": lexical_score,
+                        "hybrid_score": self._hybrid_score(semantic_score, lexical_score),
+                        "index": idx,
+                    }
+                )
+
+            if ranked:
+                ranked.sort(
+                    key=lambda x: (
+                        x.get("hybrid_score", 0.0),
+                        x.get("similarity", 0.0),
+                        x.get("lexical_score", 0.0),
+                    ),
+                    reverse=True,
+                )
+                return ranked[:top_k]
+
+            if allow_recent_fallback:
+                return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+            return []
         except Exception as e:
             print(f"Error during search: {e}")
-            return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+            if allow_recent_fallback:
+                return self.get_recent_messages(top_k, max_length=max_length, intent=intent)
+            return []
 
     def get_recent_messages(
         self,
@@ -324,22 +481,12 @@ class MemoryStore:
         max_length: Optional[int] = None,
         intent: Optional[str] = None,
     ) -> List[Dict]:
-        """Get most recent messages (fallback)."""
         if not self.messages:
             return []
 
-        def _passes_intent(text: str) -> bool:
-            if not intent:
-                return True
-            if intent == "chat":
-                return is_chat_safe(text)
-            if intent == "file":
-                return not is_blocked(text)
-            return not is_blocked(text)
-
         recent_indices = sorted(
             range(len(self.messages)),
-            key=lambda i: self.messages[i].get('timestamp', ''),
+            key=lambda i: self.messages[i].get("timestamp", ""),
             reverse=True,
         )
         recent = [(idx, self.messages[idx]) for idx in recent_indices]
@@ -347,19 +494,22 @@ class MemoryStore:
         if max_length is not None:
             filtered = []
             for idx, msg in recent:
-                text = msg.get('text', '')
-                if not _passes_intent(text):
+                text = msg.get("text", "")
+                if not self._passes_intent(text, intent):
                     continue
-                msg_length = msg.get('length', len(text))
+                msg_length = msg.get("length", len(text))
                 if msg_length <= max_length:
                     filtered.append((idx, msg))
             recent = filtered
         else:
-            recent = [(idx, msg) for idx, msg in recent if _passes_intent(msg.get('text', ''))]
+            recent = [
+                (idx, msg)
+                for idx, msg in recent
+                if self._passes_intent(msg.get("text", ""), intent)
+            ]
 
         recent = recent[:count]
-
-        return [{'message': msg, 'similarity': 0.0, 'index': idx} for idx, msg in recent]
+        return [{"message": msg, "similarity": 0.0, "index": idx} for idx, msg in recent]
 
     def search_with_context(
         self,
@@ -368,9 +518,9 @@ class MemoryStore:
         similarity_threshold: float = 0.3,
         max_length: Optional[int] = None,
         intent: Optional[str] = None,
-        neighbor_window: int = 2,
-        max_duplicates: int = 2,
-        max_total: int = 8,
+        neighbor_window: int = 1,
+        max_duplicates: int = 1,
+        max_total: int = 6,
     ) -> List[Dict]:
         base_results = self.search(
             query,
@@ -378,34 +528,66 @@ class MemoryStore:
             similarity_threshold=similarity_threshold,
             max_length=max_length,
             intent=intent,
+            allow_recent_fallback=False,
         )
         if not base_results:
             return []
 
-        def _passes_intent(text: str) -> bool:
-            if not intent:
-                return True
-            if intent == "chat":
-                return is_chat_safe(text)
-            if intent == "file":
-                return not is_blocked(text)
-            return not is_blocked(text)
+        query_terms = self._query_terms(query)
+        query_lower = query.strip().lower()
+        selected = {
+            res.get("index")
+            for res in base_results
+            if res.get("index") is not None
+        }
+        selected = set(list(selected)[:top_k])
 
-        base_indices = [res.get("index") for res in base_results if res.get("index") is not None]
-        selected = set(base_indices)
+        relevance_map = {
+            res.get("index"): float(res.get("hybrid_score", res.get("similarity", 0.0)))
+            for res in base_results
+            if res.get("index") is not None
+        }
 
-        for idx in list(base_indices):
+        for idx in list(selected):
             pos = self._index_to_pos.get(idx)
             if pos is None:
                 continue
+
+            anchor_text = self.messages[idx].get("text", "")
+            anchor_terms = self._content_terms(anchor_text)
+            min_neighbor_lex = 0.08 if intent == "info" else 0.05
+            min_neighbor_bridge = 0.3 if intent == "info" else 0.2
             for offset in range(1, neighbor_window + 1):
                 if pos - offset >= 0:
-                    selected.add(self._sorted_indices[pos - offset])
-                if pos + offset < len(self._sorted_indices):
-                    selected.add(self._sorted_indices[pos + offset])
+                    prev_idx = self._sorted_indices[pos - offset]
+                    prev_text = self.messages[prev_idx].get("text", "")
+                    prev_lex = self._lexical_score(query_terms, prev_text, query_lower)
+                    prev_bridge = (
+                        len(anchor_terms & self._content_terms(prev_text)) / max(len(anchor_terms), 1)
+                        if anchor_terms else 0.0
+                    )
+                    if prev_lex >= min_neighbor_lex or prev_bridge >= min_neighbor_bridge:
+                        selected.add(prev_idx)
 
+                if pos + offset < len(self._sorted_indices):
+                    next_idx = self._sorted_indices[pos + offset]
+                    next_text = self.messages[next_idx].get("text", "")
+                    next_lex = self._lexical_score(query_terms, next_text, query_lower)
+                    next_bridge = (
+                        len(anchor_terms & self._content_terms(next_text)) / max(len(anchor_terms), 1)
+                        if anchor_terms else 0.0
+                    )
+                    if next_lex >= min_neighbor_lex or next_bridge >= min_neighbor_bridge:
+                        selected.add(next_idx)
+
+            # Duplicate neighbors are useful only when base relevance is already strong.
             norm = self._normalized_texts[idx] if idx < len(self._normalized_texts) else ""
-            if norm and norm in self._text_to_indices:
+            if (
+                max_duplicates > 0
+                and norm
+                and norm in self._text_to_indices
+                and relevance_map.get(idx, 0.0) >= 0.5
+            ):
                 dup_indices = self._text_to_indices[norm]
                 if len(dup_indices) > 1:
                     try:
@@ -419,7 +601,6 @@ class MemoryStore:
                             if dup_pos + offset < len(dup_indices):
                                 selected.add(dup_indices[dup_pos + offset])
 
-        similarity_map = {res.get("index"): res.get("similarity", 0.0) for res in base_results}
         ordered = sorted(
             selected,
             key=lambda i: self.messages[i].get("timestamp", ""),
@@ -435,15 +616,19 @@ class MemoryStore:
                 msg_length = msg.get("length", len(text))
                 if msg_length > max_length:
                     continue
-            if not _passes_intent(text):
+            if not self._passes_intent(text, intent):
                 continue
-            results.append({
-                'message': msg,
-                'similarity': float(similarity_map.get(idx, 0.0)),
-                'index': idx,
-            })
+
+            results.append(
+                {
+                    "message": msg,
+                    "similarity": float(relevance_map.get(idx, 0.0)),
+                    "index": idx,
+                }
+            )
             if len(results) >= max_total:
                 break
+
         return results
 
     def format_context(
@@ -452,14 +637,13 @@ class MemoryStore:
         include_meta: bool = False,
         max_chars: int = 220,
     ) -> str:
-        """Format search results as context string for prompt."""
         if not search_results:
             return ""
 
         context_lines = []
         for result in search_results:
-            msg = result['message']
-            text = msg.get('text', '').strip()
+            msg = result["message"]
+            text = msg.get("text", "").strip()
             if not text:
                 continue
 
@@ -467,21 +651,20 @@ class MemoryStore:
                 text = textwrap.shorten(text, width=max_chars, placeholder="...")
 
             if include_meta:
-                timestamp = msg.get('timestamp', 'unknown')
+                timestamp = msg.get("timestamp", "unknown")
                 context_lines.append(f"- ({timestamp}) {text}")
             else:
                 context_lines.append(f"- {text}")
 
-        return '\n'.join(context_lines)
+        return "\n".join(context_lines)
 
     def sample_style_examples(self, count: int = 4, max_length: int = 120) -> List[str]:
-        """Pick short, style-rich messages to use as tone examples."""
         if not self.messages:
             return []
 
         candidates = []
         for msg in self.messages:
-            text = msg.get('text', '').strip()
+            text = msg.get("text", "").strip()
             if not text:
                 continue
             if is_blocked(text) or is_file_related(text):
@@ -496,7 +679,7 @@ class MemoryStore:
                 continue
 
             score = 0
-            if msg.get('has_emoji'):
+            if msg.get("has_emoji"):
                 score += 2
             if re.search(r"\b(ya|haan|nahi|kya|bhai|bro|lol|hehe|xd|hmm|ok|okay)\b", text.lower()):
                 score += 1
@@ -517,35 +700,31 @@ class MemoryStore:
                 examples.append(text)
             if len(examples) >= count:
                 break
-
         return examples
 
     def add_memory(self, message: Dict) -> None:
-        """Add a new message to memory."""
         self.messages.append(message)
-
+        self._build_indices()
         if self.embeddings_available and self.model:
             self._generate_embeddings()
 
     def save_memories(self, path: str = None) -> None:
-        """Save updated memories to JSON."""
         if path is None:
             path = self.memory_data_path
 
         Path(path).parent.mkdir(parents=True, exist_ok=True)
-
         try:
-            with open(path, 'w', encoding='utf-8') as f:
+            with open(path, "w", encoding="utf-8") as f:
                 json.dump(self.messages, f, ensure_ascii=False, indent=2)
             print(f"Saved {len(self.messages)} memories to {path}")
         except IOError as e:
             print(f"Error saving memories: {e}")
 
     def get_stats(self) -> Dict:
-        """Get memory store statistics."""
         return {
-            'total_memories': len(self.messages),
-            'embedding_model': self.model_name,
-            'embeddings_available': self.embeddings_available and self.model is not None,
-            'embeddings_generated': self.embeddings is not None,
+            "total_memories": len(self.messages),
+            "embedding_model": self.model_name,
+            "embeddings_available": self.embeddings_available and self.model is not None,
+            "embeddings_generated": self.embeddings is not None,
+            "vector_store_enabled": self._vector_store is not None,
         }

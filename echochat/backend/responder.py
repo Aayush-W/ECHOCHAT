@@ -161,11 +161,17 @@ class Responder:
             use_memories = False
 
         if use_memories and self.memory_store:
+            memory_threshold = 0.36 if intent == "info" else 0.32
+            memory_top_k = 3 if intent == "info" else 2
+            neighbor_window = 1 if intent == "info" else 0
             search_results = self.memory_store.search_with_context(
                 user_message,
-                top_k=4,
+                top_k=memory_top_k,
+                similarity_threshold=memory_threshold,
                 max_length=240,
                 intent=intent,
+                neighbor_window=neighbor_window,
+                max_total=5,
             )
             memories_context = self.memory_store.format_context(
                 search_results,

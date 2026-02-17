@@ -50,16 +50,8 @@
       "hint": "Example: avoid politics, keep it short"
     }
   ],
-  "answers": {
-    "greeting": "kya haal",
-    "language": "hinglish , english",
-    "length": "short",
-    "emoji": "frequent",
-    "slang": "mast, noiice, chill",
-    "humor": "plaful",
-    "boundaries": "keep it short"
-  },
-  "started_at": "2026-02-17T10:37:11.341829Z",
-  "completed_at": "2026-02-17T10:38:12.137057Z",
-  "training_job_id": "14d1746a67fd"
+  "answers": {},
+  "started_at": "2026-02-17T10:43:08.214904Z",
+  "completed_at": null,
+  "training_job_id": "3ae8d0097b70"
 }

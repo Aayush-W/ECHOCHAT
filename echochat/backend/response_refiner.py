@@ -98,10 +98,11 @@ class ResponseRefiner:
         try:
             results = self.memory_store.search(
                 query,
-                top_k=3,
-                similarity_threshold=0.35,
+                top_k=2,
+                similarity_threshold=0.4,
                 max_length=240,
                 intent=intent,
+                allow_recent_fallback=False,
             )
         except Exception:
             results = []
