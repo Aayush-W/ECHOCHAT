@@ -21,7 +21,8 @@
 }
 
 html,
-body {
+body,
+#root {
   height: 100%;
   overflow: hidden;
 }
@@ -544,7 +545,8 @@ button:disabled {
 
 @media (max-width: 980px) {
   html,
-  body {
+  body,
+  #root {
     height: auto;
     overflow: auto;
   }

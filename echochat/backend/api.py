@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 
 from fastapi import FastAPI, HTTPException, UploadFile, File, Body, BackgroundTasks
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -26,6 +27,7 @@ from .config import (
     PIPELINE_VERSION,
     FLASK_HOST,
     FLASK_PORT,
+    FRONTEND_HOST,
     BASE_DIR,
     SESSIONS_DIR,
 )
@@ -54,10 +56,35 @@ from .response_validator import ResponseValidator
 db_manager = DatabaseManager()
 
 app = FastAPI(title="EchoChat API")
-UI_DIR = BASE_DIR / "ui"
+FRONTEND_DIST_DIR = BASE_DIR / "frontend" / "dist"
+FRONTEND_INDEX = FRONTEND_DIST_DIR / "index.html"
 
-if UI_DIR.exists():
-    app.mount("/static", StaticFiles(directory=UI_DIR), name="static")
+cors_origins = {
+    f"http://{FRONTEND_HOST}",
+    f"https://{FRONTEND_HOST}",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+}
+extra_origins = os.getenv("ECHOCHAT_CORS_ORIGINS", "")
+if extra_origins:
+    cors_origins.update(
+        origin.strip()
+        for origin in extra_origins.split(",")
+        if origin.strip()
+    )
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=sorted(cors_origins),
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+if FRONTEND_DIST_DIR.exists():
+    app.mount("/static", StaticFiles(directory=FRONTEND_DIST_DIR), name="static")
 
 _RESPONDER_CACHE: "OrderedDict[str, Responder]" = OrderedDict()
 _RESPONDER_CACHE_LIMIT = 4
@@ -711,10 +738,12 @@ def health() -> dict:
 
 @app.get("/")
 def ui_root():
-    index_path = UI_DIR / "index.html"
-    if index_path.exists():
-        return FileResponse(index_path, media_type="text/html")
-    raise HTTPException(status_code=404, detail="UI not found.")
+    if FRONTEND_INDEX.exists():
+        return FileResponse(FRONTEND_INDEX, media_type="text/html")
+    raise HTTPException(
+        status_code=404,
+        detail="Frontend build not found. Build the React app first.",
+    )
 
 
 @app.get("/ui")
