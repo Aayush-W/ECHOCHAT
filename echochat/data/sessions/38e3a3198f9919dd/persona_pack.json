@@ -34,8 +34,9 @@
     "aur"
   ],
   "slang_words": [
-    "chill",
+    "mast",
     "noiice",
+    "chill",
     "bc",
     "bhadvya",
     "nahi",
@@ -56,8 +57,7 @@
     "tr",
     "woh",
     "kuch",
-    "mg",
-    "ab"
+    "mg"
   ],
   "short_reply_samples": [
     "Helloiiiii",
@@ -73,25 +73,24 @@
     "Chaukat kashyala ain",
     "Ye tikdech amhi nighto aata"
   ],
-  "preferred_greeting": "mast",
+  "preferred_greeting": "kya haal",
   "preferred_language": "hinglish",
-  "preferred_reply_length": "medium",
-  "emoji_rate_hint": "occasional",
+  "preferred_reply_length": "short",
+  "emoji_rate_hint": "frequent",
   "avoid_topics": [
     "keep it short"
   ],
   "tone_notes": "keep it short",
   "questionnaire_overrides": {
-    "preferred_greeting": "mast",
+    "preferred_greeting": "kya haal",
     "preferred_language": "hinglish",
-    "preferred_reply_length": "medium",
+    "preferred_reply_length": "short",
     "slang_words": [
-      "chill",
+      "mast",
       "noiice",
-      "bc",
-      "bhadvya"
+      "chill"
     ],
-    "humor_style": "playful",
+    "humor_style": "plaful",
     "avoid_topics": [
       "keep it short"
     ],
