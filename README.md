@@ -1,0 +1,1 @@
+EchoChat is a local pipeline that simulates a specific person's chat style based on a WhatsApp export. It builds training data and a semantic memory store, analyzes personality signals, and generates responses via a local Ollama model.
